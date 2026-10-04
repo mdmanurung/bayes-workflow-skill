@@ -1,0 +1,886 @@
+{
+  "schema_version": 1,
+  "trees": {
+    "mcmc": {
+      "title": "Validate computation",
+      "start": "is_mcmc",
+      "nodes": {
+        "is_mcmc": {
+          "question": "Are these draws from a genuine MCMC fit?",
+          "fact": "is_mcmc",
+          "yes": "hmc",
+          "no": "other_inference",
+          "unknown": "ask_method"
+        },
+        "hmc": {
+          "question": "Is the fit HMC/NUTS?",
+          "fact": "hmc",
+          "yes": "hmc_warnings",
+          "no": "stationary",
+          "unknown": "ask_sampler"
+        },
+        "hmc_warnings": {
+          "question": "Are there post-warmup divergences, low BFMI or other unresolved HMC warnings?",
+          "fact": "hmc_warnings",
+          "yes": "geometry",
+          "no": "stationary",
+          "unknown": "get_sampler"
+        },
+        "stationary": {
+          "question": "Do independently initialized chains plausibly explore the same stationary distribution?",
+          "fact": "stationary",
+          "yes": "rhat_pass",
+          "no": "inspect_chains",
+          "unknown": "get_plots"
+        },
+        "rhat_pass": {
+          "question": "Do all relevant rank-normalized/folded R-hat values pass the registry screen?",
+          "fact": "rhat_pass",
+          "yes": "ess_pass",
+          "no": "inspect_chains",
+          "unknown": "get_rhat"
+        },
+        "ess_pass": {
+          "question": "Are bulk and tail ESS sufficient for relevant quantities?",
+          "fact": "ess_pass",
+          "yes": "mcse_pass",
+          "no": "precision_or_geometry",
+          "unknown": "get_ess"
+        },
+        "mcse_pass": {
+          "question": "Is estimand-specific MCSE below the scientific precision budget?",
+          "fact": "mcse_pass",
+          "yes": "next_ppc",
+          "no": "precision_or_geometry",
+          "unknown": "get_mcse"
+        },
+        "other_inference": {
+          "action": "Use inference-method-specific accuracy checks; fake chains do not validate VI/Laplace or optimization.",
+          "guide": "guides/sbc.md",
+          "rerun": []
+        },
+        "ask_method": {
+          "action": "Inspect how the draws were produced and whether chain axes represent independent runs.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "ask_sampler": {
+          "action": "Inspect inference method and sampler metadata.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "get_sampler": {
+          "action": "Extract warnings, divergences, treedepth and per-chain BFMI/energy where available.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "geometry": {
+          "action": "Localize warnings in parameter space; check scaling, identification and parameterization before tuning. Route divergences separately.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences",
+            "mcmc"
+          ]
+        },
+        "get_plots": {
+          "action": "Inspect trace/rank plots and chain-wise scales/modes; preserve chain identity.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "get_rhat": {
+          "action": "Compute rank-normalized split/folded R-hat for parameters and scientific derived quantities.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "get_ess": {
+          "action": "Compute bulk/tail and quantity-specific ESS.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "get_mcse": {
+          "action": "Define tolerable numerical error and compute mean/quantile/probability MCSE.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "inspect_chains": {
+          "action": "Distinguish transients/slow mixing from separated modes, scaling, weak identification and geometry. Extend only after stable improvement is evidenced.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "precision_or_geometry": {
+          "action": "If stationarity/geometry are sound and ESS grows with draws, add independent useful computation; otherwise repair mixing/geometry. Recheck tails and estimands.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "next_ppc": {
+          "action": "Computational screens passed for the supplied quantities; proceed to targeted PPC and sensitivity. This is not model adequacy.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc",
+            "sensitivity"
+          ]
+        }
+      }
+    },
+    "divergences": {
+      "title": "Diagnose divergent HMC trajectories",
+      "start": "post_warmup_divergences",
+      "nodes": {
+        "post_warmup_divergences": {
+          "question": "Are there post-warmup divergences?",
+          "fact": "post_warmup_divergences",
+          "yes": "data_support_valid",
+          "no": "other_checks",
+          "unknown": "get_flags"
+        },
+        "data_support_valid": {
+          "question": "Have likelihood support, transforms, indexing and data errors been checked?",
+          "fact": "data_support_valid",
+          "yes": "scales_reasonable",
+          "no": "fix_implementation",
+          "unknown": "check_support"
+        },
+        "scales_reasonable": {
+          "question": "Are units/scales numerically reasonable?",
+          "fact": "scales_reasonable",
+          "yes": "geometry_localized",
+          "no": "rescale",
+          "unknown": "inspect_scales"
+        },
+        "geometry_localized": {
+          "question": "Have divergence-marked pairs and hierarchical/dependence geometry been inspected?",
+          "fact": "geometry_localized",
+          "yes": "identification_sound",
+          "no": "inspect_geometry",
+          "unknown": "inspect_geometry"
+        },
+        "identification_sound": {
+          "question": "Is identification adequate for the intended quantities?",
+          "fact": "identification_sound",
+          "yes": "reparameterization_reviewed",
+          "no": "reformulate",
+          "unknown": "check_identification"
+        },
+        "reparameterization_reviewed": {
+          "question": "Has a probability-preserving parameterization appropriate to the data information been considered?",
+          "fact": "reparameterization_reviewed",
+          "yes": "tuning_plausible",
+          "no": "reparameterize",
+          "unknown": "reparameterize"
+        },
+        "tuning_plausible": {
+          "question": "After geometry review, is smaller integration error a plausible remaining mechanism?",
+          "fact": "tuning_plausible",
+          "yes": "tune_then_check",
+          "no": "structural_review",
+          "unknown": "structural_review"
+        },
+        "other_checks": {
+          "action": "Zero observed divergences passes this screen only; inspect R-hat/ESS/MCSE, BFMI and PPC.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        },
+        "get_flags": {
+          "action": "Extract post-warmup divergent flags and chain counts; distinguish adaptation warnings.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences"
+          ]
+        },
+        "check_support": {
+          "action": "Audit the generative implementation before modifying sampler settings.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences"
+          ]
+        },
+        "fix_implementation": {
+          "action": "Correct justified data/model implementation errors, then refit.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "prior-predictive",
+            "mcmc",
+            "ppc"
+          ]
+        },
+        "inspect_scales": {
+          "action": "Inspect predictor/outcome units and positive scale transformations.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences"
+          ]
+        },
+        "rescale": {
+          "action": "Rescale inputs/parameters with correctly transformed priors and predictions; refit.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "prior-predictive",
+            "mcmc",
+            "ppc"
+          ]
+        },
+        "inspect_geometry": {
+          "action": "Mark divergent transitions in pairs/parallel plots and inspect funnels, curvature, dependence and boundaries.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences"
+          ]
+        },
+        "check_identification": {
+          "action": "Inspect scientific identification and ridge/scale symmetries; use simulation and informed domain constraints.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences"
+          ]
+        },
+        "reformulate": {
+          "action": "Revise unidentified structure or justified priors; explain induced predictions and limits.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "prior-predictive",
+            "mcmc",
+            "ppc",
+            "sensitivity"
+          ]
+        },
+        "reparameterize": {
+          "action": "Consider centered/noncentered or other probability-preserving transforms based on information/geometry; verify the induced prior.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "prior-predictive",
+            "mcmc",
+            "ppc"
+          ]
+        },
+        "tune_then_check": {
+          "action": "Try bounded sampler tuning; record efficiency/treedepth and rerun all computational checks. An acceptance target alone does not resolve bias.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences",
+            "mcmc"
+          ]
+        },
+        "structural_review": {
+          "action": "Reassess geometry/identification, prior scales, likelihood structure or alternative inference; do not keep escalating adapt_delta blindly.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "divergences",
+            "prior-predictive",
+            "mcmc"
+          ]
+        }
+      }
+    },
+    "prior-predictive": {
+      "title": "Respond to prior predictive failure",
+      "start": "plausibility_targets",
+      "nodes": {
+        "plausibility_targets": {
+          "question": "Are external/domain observable and derived-quantity plausibility targets defined?",
+          "fact": "plausibility_targets",
+          "yes": "generator_correct",
+          "no": "elicit",
+          "unknown": "elicit"
+        },
+        "generator_correct": {
+          "question": "Does simulation correctly implement the model, design and observation process?",
+          "fact": "generator_correct",
+          "yes": "prior_predictions_plausible",
+          "no": "fix_generator",
+          "unknown": "audit_generator"
+        },
+        "prior_predictions_plausible": {
+          "question": "Are support, scales, tails and group variation plausible under the joint prior?",
+          "fact": "prior_predictions_plausible",
+          "yes": "fit",
+          "no": "prior_cause",
+          "unknown": "simulate_checks"
+        },
+        "prior_cause": {
+          "question": "Does failure localize to justified revisable prior scales/dependence?",
+          "fact": "prior_cause",
+          "yes": "revise_priors",
+          "no": "revise_model",
+          "unknown": "localize"
+        },
+        "elicit": {
+          "action": "Elicit plausible quantities/intervals at representative design points and groups.",
+          "guide": "guides/prior-elicitation.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "audit_generator": {
+          "action": "Check links, units, transforms, indexing, exposure and censoring before changing priors.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "fix_generator": {
+          "action": "Repair the simulator/model implementation and resimulate.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "simulate_checks": {
+          "action": "Simulate prior outcomes and scientific derived/group quantities against specified plausibility targets.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "localize": {
+          "action": "Inspect induced parameter/observable scales and conditional group structure to locate the mechanism.",
+          "guide": "guides/prior-elicitation.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "revise_priors": {
+          "action": "Revise defensible prior family/scales/dependence and document elicitation rationale.",
+          "guide": "guides/prior-elicitation.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "revise_model": {
+          "action": "Revise scientifically implausible support/link/hierarchy or observation mechanism.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "prior-predictive"
+          ]
+        },
+        "fit": {
+          "action": "Prior predictions pass specified plausibility checks; fit and validate computation.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc"
+          ]
+        }
+      }
+    },
+    "ppc": {
+      "title": "Choose and respond to targeted PPC",
+      "start": "computation_adequate",
+      "nodes": {
+        "computation_adequate": {
+          "question": "Is computation adequate for the quantities used in predictions?",
+          "fact": "computation_adequate",
+          "yes": "targeted_quantities",
+          "no": "repair_computation",
+          "unknown": "validate_computation"
+        },
+        "targeted_quantities": {
+          "question": "Do checks expose specific plausible failures, including relevant dependence/groups?",
+          "fact": "targeted_quantities",
+          "yes": "observation_replication_correct",
+          "no": "choose_quantities",
+          "unknown": "choose_quantities"
+        },
+        "observation_replication_correct": {
+          "question": "Does replication reproduce design, measurement/censoring and prediction conditioning?",
+          "fact": "observation_replication_correct",
+          "yes": "ppc_features_adequate",
+          "no": "fix_replication",
+          "unknown": "audit_replication"
+        },
+        "ppc_features_adequate": {
+          "question": "Are the checked features adequate for the scientific task?",
+          "fact": "ppc_features_adequate",
+          "yes": "next_sensitivity",
+          "no": "model_revision",
+          "unknown": "inspect_ppc"
+        },
+        "repair_computation": {
+          "action": "Resolve computation before substantive interpretation of PPC discrepancies.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "ppc"
+          ]
+        },
+        "validate_computation": {
+          "action": "Check sampler warnings, chain behavior, R-hat/ESS and predictive-quantity MCSE.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "ppc"
+          ]
+        },
+        "choose_quantities": {
+          "action": "Choose location/spread/tails/zeros/groups/dependence or scientific contrasts that reveal the suspected failure.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc"
+          ]
+        },
+        "audit_replication": {
+          "action": "Verify outcomes versus expected responses, new versus existing groups and the observation process.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc"
+          ]
+        },
+        "fix_replication": {
+          "action": "Correct the predictive simulation before revising the likelihood.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc"
+          ]
+        },
+        "inspect_ppc": {
+          "action": "Compute/plot the specified checks with observed reference features and relevant uncertainty.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc"
+          ]
+        },
+        "model_revision": {
+          "action": "Localize systematic failure and revise justified likelihood/link/dependence/hierarchy; document the mechanism.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "prior-predictive",
+            "mcmc",
+            "ppc",
+            "sensitivity"
+          ]
+        },
+        "next_sensitivity": {
+          "action": "These features show no identified failure; check sensitivity and unresolved scientific assumptions. Good PPC does not prove correctness.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        }
+      }
+    },
+    "sensitivity": {
+      "title": "Validate and interpret sensitivity",
+      "start": "computation_adequate",
+      "nodes": {
+        "computation_adequate": {
+          "question": "Is base computation adequate?",
+          "fact": "computation_adequate",
+          "yes": "using_power_scaling",
+          "no": "repair_base",
+          "unknown": "check_base"
+        },
+        "using_power_scaling": {
+          "question": "Is sensitivity being approximated by power-scaling importance sampling?",
+          "fact": "using_power_scaling",
+          "yes": "density_components_valid",
+          "no": "refits_valid",
+          "unknown": "choose_method"
+        },
+        "density_components_valid": {
+          "question": "Are selected density components, transformations and alpha targets valid?",
+          "fact": "density_components_valid",
+          "yes": "importance_reliable",
+          "no": "fix_densities",
+          "unknown": "audit_densities"
+        },
+        "importance_reliable": {
+          "question": "Are alpha-specific Pareto/weight/precision diagnostics reliable?",
+          "fact": "importance_reliable",
+          "yes": "change_exceeds_mcse",
+          "no": "refit",
+          "unknown": "check_weights"
+        },
+        "refits_valid": {
+          "question": "Have all alternative refits passed computation and matched estimand checks?",
+          "fact": "refits_valid",
+          "yes": "change_exceeds_mcse",
+          "no": "validate_refits",
+          "unknown": "validate_refits"
+        },
+        "change_exceeds_mcse": {
+          "question": "Is the observed change distinguishable from Monte Carlo error?",
+          "fact": "change_exceeds_mcse",
+          "yes": "practically_material",
+          "no": "improve_precision",
+          "unknown": "estimate_precision"
+        },
+        "practically_material": {
+          "question": "Does sensitivity materially affect the scientific conclusion?",
+          "fact": "practically_material",
+          "yes": "investigate_mechanism",
+          "no": "report_local_robustness",
+          "unknown": "define_tolerance"
+        },
+        "repair_base": {
+          "action": "Repair base computation first.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "sensitivity"
+          ]
+        },
+        "check_base": {
+          "action": "Validate base diagnostics and estimands before sensitivity.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "sensitivity"
+          ]
+        },
+        "choose_method": {
+          "action": "Choose justified refit alternatives or valid local power perturbations; they answer different questions.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        },
+        "fix_densities": {
+          "action": "Correct the selected density/parameter measure and confirm proper targets.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        },
+        "audit_densities": {
+          "action": "Specify prior versus likelihood factors and hierarchy level; do not use lp__ as prior.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        },
+        "refit": {
+          "action": "Use explicit justified refits when importance overlap is unreliable; validate every fit.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "mcmc",
+            "ppc",
+            "sensitivity"
+          ]
+        },
+        "check_weights": {
+          "action": "Inspect PSIS Pareto-k, weight concentration and MC precision at each used alpha.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        },
+        "validate_refits": {
+          "action": "Check each refit computation, PPC and the same scientific quantities.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "mcmc",
+            "ppc",
+            "sensitivity"
+          ]
+        },
+        "improve_precision": {
+          "action": "The change is unresolved at current numerical precision; improve useful computation or report the limit.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "mcmc",
+            "sensitivity"
+          ]
+        },
+        "estimate_precision": {
+          "action": "Compute MCSE of compared quantities and scientific tolerance.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        },
+        "define_tolerance": {
+          "action": "State which magnitudes or decisions would change the scientific conclusion.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity"
+          ]
+        },
+        "investigate_mechanism": {
+          "action": "Distinguish intended prior information, weak likelihood, potential conflict and model misfit; inspect direction and corroborate local IS findings by refits.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "prior-predictive",
+            "mcmc",
+            "ppc",
+            "sensitivity"
+          ]
+        },
+        "report_local_robustness": {
+          "action": "Report tested alternatives/components/range and precision; local insensitivity is not universal robustness.",
+          "guide": "guides/reporting.md",
+          "rerun": []
+        }
+      }
+    },
+    "psis-loo": {
+      "title": "Validate predictive comparison and PSIS",
+      "start": "target_compatible",
+      "nodes": {
+        "target_compatible": {
+          "question": "Are predictive target, held-out unit, information and likelihood measure compatible?",
+          "fact": "target_compatible",
+          "yes": "computation_adequate",
+          "no": "define_target",
+          "unknown": "define_target"
+        },
+        "computation_adequate": {
+          "question": "Is posterior computation adequate?",
+          "fact": "computation_adequate",
+          "yes": "candidate_criticism_done",
+          "no": "repair_computation",
+          "unknown": "validate_computation"
+        },
+        "candidate_criticism_done": {
+          "question": "Have candidate models received targeted criticism and relevant inadequacies been acknowledged?",
+          "fact": "candidate_criticism_done",
+          "yes": "pareto_reliable",
+          "no": "criticize_candidates",
+          "unknown": "criticize_candidates"
+        },
+        "pareto_reliable": {
+          "question": "Do pointwise Pareto/precision diagnostics support PSIS for this target?",
+          "fact": "pareto_reliable",
+          "yes": "difference_uncertainty_examined",
+          "no": "influence_examined",
+          "unknown": "compute_pointwise"
+        },
+        "influence_examined": {
+          "question": "Have high-k units been checked for data errors, model misfit and target issues?",
+          "fact": "influence_examined",
+          "yes": "moment_matching_supported",
+          "no": "inspect_influence",
+          "unknown": "inspect_influence"
+        },
+        "moment_matching_supported": {
+          "question": "Is valid moment matching supported by the model adapter/callbacks?",
+          "fact": "moment_matching_supported",
+          "yes": "repair_and_recheck",
+          "no": "exact_refit_or_folds",
+          "unknown": "verify_adapter"
+        },
+        "difference_uncertainty_examined": {
+          "question": "Are paired ELPD uncertainty, unit influence and search/dependence limits assessed?",
+          "fact": "difference_uncertainty_examined",
+          "yes": "make_predictive_decision",
+          "no": "inspect_differences",
+          "unknown": "inspect_differences"
+        },
+        "define_target": {
+          "action": "Define target and align normalized unit contributions; use group/time/explicit folds if needed.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "psis-loo"
+          ]
+        },
+        "repair_computation": {
+          "action": "Repair computation before using predictive scores.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "psis-loo"
+          ]
+        },
+        "validate_computation": {
+          "action": "Validate computation and log-likelihood extraction.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "psis-loo"
+          ]
+        },
+        "criticize_candidates": {
+          "action": "Run targeted PPC/sensitivity and acknowledge remaining failures; relative performance does not establish adequacy.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc",
+            "sensitivity",
+            "psis-loo"
+          ]
+        },
+        "compute_pointwise": {
+          "action": "Compute pointwise LOO, k and precision; retain observation IDs.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "psis-loo"
+          ]
+        },
+        "inspect_influence": {
+          "action": "Inspect valid influential units and likelihood/model/target mechanisms; do not silently omit them.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "ppc",
+            "psis-loo"
+          ]
+        },
+        "verify_adapter": {
+          "action": "Verify unconstrained-density callbacks/Jacobians or official model support.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "psis-loo"
+          ]
+        },
+        "repair_and_recheck": {
+          "action": "Try moment matching; rerun k/precision. Refit unresolved units or use folds; model changes require their own scientific evidence.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "psis-loo"
+          ]
+        },
+        "exact_refit_or_folds": {
+          "action": "Refit leave-out posteriors or use scientifically appropriate folds, with computational validation.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "mcmc",
+            "psis-loo"
+          ]
+        },
+        "inspect_differences": {
+          "action": "Inspect paired pointwise differences, SE and practical utility; account for dependence/search.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "psis-loo"
+          ]
+        },
+        "make_predictive_decision": {
+          "action": "Choose an adequate useful prediction strategy or stacking mixture using uncertainty and costs; critique mixture predictions.",
+          "guide": "guides/reporting.md",
+          "rerun": [
+            "ppc"
+          ]
+        }
+      }
+    },
+    "end-to-end": {
+      "title": "Route the next analysis step",
+      "start": "scientific_target_defined",
+      "nodes": {
+        "scientific_target_defined": {
+          "question": "Are the scientific question, estimand and design/observation process defined?",
+          "fact": "scientific_target_defined",
+          "yes": "prior_checked",
+          "no": "define_science",
+          "unknown": "define_science"
+        },
+        "prior_checked": {
+          "question": "Have induced prior predictions passed scientifically targeted checks?",
+          "fact": "prior_checked",
+          "yes": "computation_adequate",
+          "no": "prior_route",
+          "unknown": "prior_route"
+        },
+        "computation_adequate": {
+          "question": "Has computation been validated for relevant quantities?",
+          "fact": "computation_adequate",
+          "yes": "ppc_done",
+          "no": "mcmc_route",
+          "unknown": "mcmc_route"
+        },
+        "ppc_done": {
+          "question": "Have targeted PPCs been assessed and failures addressed/acknowledged?",
+          "fact": "ppc_done",
+          "yes": "sensitivity_done",
+          "no": "ppc_route",
+          "unknown": "ppc_route"
+        },
+        "sensitivity_done": {
+          "question": "Has relevant prior/likelihood sensitivity been checked with reliable estimators?",
+          "fact": "sensitivity_done",
+          "yes": "comparison_useful",
+          "no": "sensitivity_route",
+          "unknown": "sensitivity_route"
+        },
+        "comparison_useful": {
+          "question": "Would predictive comparison inform the scientific decision?",
+          "fact": "comparison_useful",
+          "yes": "comparison_valid",
+          "no": "report",
+          "unknown": "decide_comparison"
+        },
+        "comparison_valid": {
+          "question": "Have target, reliability, uncertainty and candidate criticism gates been completed?",
+          "fact": "comparison_valid",
+          "yes": "report",
+          "no": "comparison_route",
+          "unknown": "comparison_route"
+        },
+        "define_science": {
+          "action": "Inspect model/code/data and define estimands, units, information and identification limits.",
+          "guide": "SKILL.md",
+          "rerun": [
+            "end-to-end"
+          ]
+        },
+        "prior_route": {
+          "action": "Run prior plausibility/elicitation; simulation/implementation changes return here.",
+          "guide": "guides/prior-elicitation.md",
+          "rerun": [
+            "prior-predictive",
+            "end-to-end"
+          ]
+        },
+        "mcmc_route": {
+          "action": "Run method-appropriate computation checks; failures return to geometry/model/implementation as diagnosed.",
+          "guide": "guides/diagnostics.md",
+          "rerun": [
+            "mcmc",
+            "end-to-end"
+          ]
+        },
+        "ppc_route": {
+          "action": "Choose targeted predictive failures and replicate the actual observation process.",
+          "guide": "guides/predictive-checking.md",
+          "rerun": [
+            "ppc",
+            "end-to-end"
+          ]
+        },
+        "sensitivity_route": {
+          "action": "Compare scientifically relevant alternatives/components with precision and reliability gates.",
+          "guide": "guides/sensitivity.md",
+          "rerun": [
+            "sensitivity",
+            "end-to-end"
+          ]
+        },
+        "decide_comparison": {
+          "action": "State whether selecting/combining predictive strategies helps the scientific task; it is optional.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "end-to-end"
+          ]
+        },
+        "comparison_route": {
+          "action": "Define target/units, inspect pointwise PSIS or folds and paired uncertainty, then make a practical decision.",
+          "guide": "guides/model-comparison.md",
+          "rerun": [
+            "psis-loo",
+            "end-to-end"
+          ]
+        },
+        "report": {
+          "action": "Report claims, assumptions, uncertainty and limitations; keep the model-development record and reproducible evidence. No checklist proves scientific correctness.",
+          "guide": "guides/reporting.md",
+          "rerun": []
+        }
+      }
+    }
+  }
+}

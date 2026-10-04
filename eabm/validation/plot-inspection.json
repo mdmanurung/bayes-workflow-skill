@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-04",
+  "scope": "representative EABM rendered plots; see source-inspection.md",
+  "sources": [
+    {
+      "url": "https://arviz-devs.github.io/EABM/img/max_ent.png",
+      "alt": null
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/MCMC_diagnostics_files/figure-html/fig-energy_plot_cm-output-1.png",
+      "alt": null
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/MCMC_diagnostics_files/figure-html/fig-energy_plot_ncm-output-1.png",
+      "alt": null
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Sensitivity_checks_files/figure-html/fig-quantities_bf_00-output-1.png",
+      "alt": null
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Sensitivity_checks_files/figure-html/fig-quantities_bf_01-output-1.png",
+      "alt": null
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Prior_posterior_predictive_checks_files/figure-html/fig-ppc_rootogram_crab_poisson-output-1.png",
+      "alt": null
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Prior_posterior_predictive_checks_files/figure-html/fig-ppc_rootogram_crab_hurdle_nb-output-1.png",
+      "alt": null
+    }
+  ]
+}

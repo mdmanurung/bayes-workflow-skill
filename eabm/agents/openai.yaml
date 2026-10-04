@@ -1,0 +1,13 @@
+interface:
+  display_name: Bayesian Model Analysis (EABM)
+  short_description: Diagnose and critique Bayesian models in R or Python
+  default_prompt: Use $eabm to decide what to check next in my Bayesian model.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

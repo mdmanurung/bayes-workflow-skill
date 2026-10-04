@@ -1,0 +1,42 @@
+{
+  "compiler": "stanc3 2.39.0",
+  "scope": "Stan-to-C++ syntax/type/pedantic checks, not model executable compilation or MCMC",
+  "models": [
+    {
+      "file": "code/stan_patterns/gaussian_regression.stan",
+      "returncode": 0,
+      "source_sha256": "f85403399069dab28b15b6c3f190e34ba5ba0c29ab48b335e647440b4c246353",
+      "warnings": "Warning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/gaussian_regression.stan', line 19, column 2 to column 13:\n    The parameter alpha has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/gaussian_regression.stan', line 20, column 2 to column 17:\n    The parameter beta has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/gaussian_regression.stan', line 21, column 2 to column 22:\n    The parameter sigma has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\n"
+    },
+    {
+      "file": "code/stan_patterns/geometric_censoring.stan",
+      "returncode": 0,
+      "source_sha256": "eedf187678b2cb91928b0eb51736020110add6092a234baf684560f527de6f4d",
+      "warnings": "Warning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/geometric_censoring.stan', line 24, column 13 to column 43:\n    The parameter p has no priors. This means either no prior is provided, or\n    the prior(s) depend on data variables. In the later case, this may be a\n    false positive.\n"
+    },
+    {
+      "file": "code/stan_patterns/hierarchical_cp.stan",
+      "returncode": 0,
+      "source_sha256": "757029686e911b6f3e12c0813f1ccd39be44c2901d1678e9e6fe6dbcad5b1a98",
+      "warnings": "Warning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_cp.stan', line 23, column 2 to column 13:\n    The parameter alpha has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_cp.stan', line 24, column 2 to column 12:\n    The parameter beta has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_cp.stan', line 25, column 2 to column 25:\n    The parameter tau has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_cp.stan', line 26, column 2 to column 28:\n    The parameter L has no priors. This means either no prior is provided, or\n    the prior(s) depend on data variables. In the later case, this may be a\n    false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_cp.stan', line 27, column 2 to column 17:\n    The parameter b has no priors. This means either no prior is provided, or\n    the prior(s) depend on data variables. In the later case, this may be a\n    false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_cp.stan', line 28, column 2 to column 22:\n    The parameter sigma has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\n"
+    },
+    {
+      "file": "code/stan_patterns/hierarchical_ncp.stan",
+      "returncode": 0,
+      "source_sha256": "cd2e1484fa3ca2c8aa4eb564b3ece15609c4e7ce3bec91de44036d0edc2e2f35",
+      "warnings": "Warning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_ncp.stan', line 23, column 2 to column 13:\n    The parameter alpha has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_ncp.stan', line 24, column 2 to column 12:\n    The parameter beta has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_ncp.stan', line 25, column 2 to column 25:\n    The parameter tau has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_ncp.stan', line 26, column 2 to column 28:\n    The parameter L has no priors. This means either no prior is provided, or\n    the prior(s) depend on data variables. In the later case, this may be a\n    false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/hierarchical_ncp.stan', line 28, column 2 to column 22:\n    The parameter sigma has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\n"
+    },
+    {
+      "file": "code/stan_patterns/poisson_lognormal_integrated.stan",
+      "returncode": 0,
+      "source_sha256": "4613d1f84b6377bdf12c0f3cfd6c0506b8575655c4c305cdd31deceb906de4de",
+      "warnings": "Warning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/poisson_lognormal_integrated.stan', line 26, column 2 to column 13:\n    The parameter alpha has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/poisson_lognormal_integrated.stan', line 27, column 2 to column 17:\n    The parameter beta has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/poisson_lognormal_integrated.stan', line 28, column 2 to column 22:\n    The parameter sigma has no priors. This means either no prior is\n    provided, or the prior(s) depend on data variables. In the later case,\n    this may be a false positive.\n"
+    },
+    {
+      "file": "code/stan_patterns/poisson_mixture.stan",
+      "returncode": 0,
+      "source_sha256": "d0da444bf42e08c39ccb9fd451963b8e67dc5f089a180e82776f6f73a680cd02",
+      "warnings": "Warning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/poisson_mixture.stan', line 18, column 2 to column 25:\n    The parameter mu has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\nWarning in '/root/.codex/skills/remote-skills/bayesian-modeling-workflow/code/stan_patterns/poisson_mixture.stan', line 19, column 2 to column 17:\n    The parameter beta has no priors. This means either no prior is provided,\n    or the prior(s) depend on data variables. In the later case, this may be\n    a false positive.\n"
+    }
+  ]
+}

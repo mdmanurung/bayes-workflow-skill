@@ -1,0 +1,205 @@
+[
+  {
+    "path": "index.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/index.html",
+    "status": 200,
+    "bytes": 1863228,
+    "sha256": "80b7dcf6d48f66cdfaa5f2e0bc2134f68f8160c11a8180c91a542aced1cedb85"
+  },
+  {
+    "path": "casestudies.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/casestudies.html",
+    "status": 200,
+    "bytes": 1541620,
+    "sha256": "61e5f43c2b56c920de3572608fd3ad19b0c72afe2d80d48a4225a7afdb0046e5"
+  },
+  {
+    "path": "exercises.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/exercises.html",
+    "status": 200,
+    "bytes": 1503931,
+    "sha256": "369d01b42ad3334a65b60ebe206b1038c5e682cd42340128677cf031926dde1a"
+  },
+  {
+    "path": "other_code.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/other_code.html",
+    "status": 200,
+    "bytes": 1497971,
+    "sha256": "90479290975e7648c38e2597a50ee0e2db487a9cbccbfe80a63932608c1d5909"
+  },
+  {
+    "path": "resources.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/resources.html",
+    "status": 200,
+    "bytes": 1503117,
+    "sha256": "7f0130d60618e16779f72d82b33e0c4f29d085f7907976fe8d821dbdcbc36202"
+  },
+  {
+    "path": "errata.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/errata.html",
+    "status": 200,
+    "bytes": 1541481,
+    "sha256": "ed7241852e0daeefb4d1b9b531e5c5ca653eb85a287d363e2c65aa8d71599514"
+  },
+  {
+    "path": "bioassay/bioassay.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/bioassay/bioassay.html",
+    "status": 200,
+    "bytes": 2708565,
+    "sha256": "ca0bf16065b732bca95f1f7270c1f9c5a6038948eb236c4790f804b058b311da"
+  },
+  {
+    "path": "multiple_choice/multiple_choice.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/multiple_choice/multiple_choice.html",
+    "status": 200,
+    "bytes": 13296265,
+    "sha256": "1098fcb7ef70926106b9b6ac764648f2ea7859d8fa6726c964a17070d9448978"
+  },
+  {
+    "path": "loo_comparison/loo_comparison.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/loo_comparison/loo_comparison.html",
+    "status": 200,
+    "bytes": 2501240,
+    "sha256": "7787580d28946bb50a5d6b76f1cd50fa84a9aacc0f042d20d56d3a3d1c603c96"
+  },
+  {
+    "path": "digits/digits.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/digits/digits.html",
+    "status": 200,
+    "bytes": 1819684,
+    "sha256": "3c77aa097382ecccb192950fbee4ce82f2e6efb36c2ec49270864f56166cd8e4"
+  },
+  {
+    "path": "problems/problems.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/problems/problems.html",
+    "status": 200,
+    "bytes": 8060238,
+    "sha256": "635e503f4c00fc0c04ce3b1683174eee21fddfbfca7abde6502c8806610f1d4e"
+  },
+  {
+    "path": "declining_exponentials/declining_exponentials.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/declining_exponentials/declining_exponentials.html",
+    "status": 200,
+    "bytes": 1791657,
+    "sha256": "93e90c19e7cfb8ab16c77433e36c15cae71eb6ed2212ea529c2b87e6a3433cf4"
+  },
+  {
+    "path": "movies/movies.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/movies/movies.html",
+    "status": 200,
+    "bytes": 2158742,
+    "sha256": "854a8386a15bf8fd80d65a3871df3452c82b199d48c5c0391eb02b8c8ff2522a"
+  },
+  {
+    "path": "sleep_study/sleep_study.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/sleep_study/sleep_study.html",
+    "status": 200,
+    "bytes": 5150669,
+    "sha256": "652c3c6da8c78b915d3d116313d678a9cdfe98f4defd7cb1ab6d2625cc69bee0"
+  },
+  {
+    "path": "nabiximols/nabiximols.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/nabiximols/nabiximols.html",
+    "status": 200,
+    "bytes": 4192446,
+    "sha256": "ca336aced22753301fe566cbc9efa990090228442f5036b919bfc356e9cf63e6"
+  },
+  {
+    "path": "coronavirus/coronavirus.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/coronavirus/coronavirus.html",
+    "status": 200,
+    "bytes": 2744829,
+    "sha256": "64cc45e31d321263ffa0ec07b3d844c6e49eead5da8ca1358544fb1d34d1d164"
+  },
+  {
+    "path": "timeseries/timeseries.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/timeseries/timeseries.html",
+    "status": 200,
+    "bytes": 1945492,
+    "sha256": "fd365fabac49cdc758fb79b0e393f6290814886f5be988275274cc01d852f67f"
+  },
+  {
+    "path": "dogs/dogs.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/dogs/dogs.html",
+    "status": 200,
+    "bytes": 3843003,
+    "sha256": "aefc55ebf82264b58a83d44b58777063a698abf17fb8c6cf0d59dcb840370c9d"
+  },
+  {
+    "path": "dogs/dogs_stan.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/dogs/dogs_stan.html",
+    "status": 200,
+    "bytes": 1887274,
+    "sha256": "915e1af03a9a02c1e56fedfd9faefc755b1062be93aee4e1edd062a2d36c687a"
+  },
+  {
+    "path": "cat_adoptions/cat_adoptions.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/cat_adoptions/cat_adoptions.html",
+    "status": 200,
+    "bytes": 3032907,
+    "sha256": "4cc41ada564af82a5ef219a39a965fcc6758bbb40942618cef70f412c7b9100b"
+  },
+  {
+    "path": "world_cup/world_cup.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/world_cup/world_cup.html",
+    "status": 200,
+    "bytes": 4052793,
+    "sha256": "73d1263d80ad046c376a4730fd129999cedbe5af231296a24e6881b954a99b2c"
+  },
+  {
+    "path": "roaches/roaches.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/roaches/roaches.html",
+    "status": 200,
+    "bytes": 3869009,
+    "sha256": "509f8402649ba5f41f8cc2b5c0fa79585df82d3ace0bf53b5ceb70fa6852e23b"
+  },
+  {
+    "path": "golf/golf.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/golf/golf.html",
+    "status": 200,
+    "bytes": 3297243,
+    "sha256": "d0cfeff8bbe7d51e91cec09786dd6528a528bb8f2833772af330e69185bd4282"
+  },
+  {
+    "path": "sharks/sharks.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/sharks/sharks.html",
+    "status": 200,
+    "bytes": 2533429,
+    "sha256": "9ae8146d5177109401a554dca98a0b0819cc4ff5381e497c33ca6400ed6bc954"
+  },
+  {
+    "path": "birthdays/birthdays.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/birthdays/birthdays.html",
+    "status": 200,
+    "bytes": 22910170,
+    "sha256": "0aacb585e414070891fe62ba1bbe85078272931fd08f4798928eae96d3a33072"
+  },
+  {
+    "path": "variable_selection/variable_selection.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/variable_selection/variable_selection.html",
+    "status": 200,
+    "bytes": 4326010,
+    "sha256": "12eee5458a8cd2dd3df36bee2c1ef9180ea92adf37842447d3a72ad716999dd1"
+  },
+  {
+    "path": "park_rule/park_rule.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/park_rule/park_rule.html",
+    "status": 200,
+    "bytes": 3378759,
+    "sha256": "81857f28662d6e8979437fe317acf7a440797ff354470a0f85da7f8a5bb11d4a"
+  },
+  {
+    "path": "planetary_motion/planetary_motion.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/planetary_motion/planetary_motion.html",
+    "status": 200,
+    "bytes": 2278642,
+    "sha256": "5180f88536f6698c5bcac887bfa1c253f51c4770be6f151644088c3cf02475d7"
+  },
+  {
+    "path": "sbc/sbc.html",
+    "url": "https://avehtari.github.io/Bayesian-Workflow/sbc/sbc.html",
+    "status": 200,
+    "bytes": 5892333,
+    "sha256": "100d0cd4ebf90f0b71781b44a35f0ffda0b2d9351aedf829db9d3764c8d3df57"
+  }
+]

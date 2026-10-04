@@ -1,0 +1,716 @@
+[
+  {
+    "id": "R01",
+    "recommendation": "Match encoding to task; label units",
+    "source": "E01: colour/axes",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-VIS; D-GGDIST",
+    "scope": "Can the figure mislead?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R01-R",
+    "recommendation": "Implement Axes, encodings, palettes using ggplot2 / ggdist.",
+    "source": "E01: colour/axes (statistical reasoning); M-VIS; D-GGDIST",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R02",
+    "recommendation": "Preserve identifiers; align before arithmetic",
+    "source": "E02: groups/dimensions",
+    "evidence_status": "eabm-code",
+    "implementation_source": "D-AZ; D-POSTERIOR",
+    "scope": "Are draws aligned?",
+    "qualification": "eabm-code; R translated"
+  },
+  {
+    "id": "R02-R",
+    "recommendation": "Implement Inspect groups, labels, coordinates using posterior draws_array; explicit observation IDs.",
+    "source": "E02: groups/dimensions (statistical reasoning); D-AZ; D-POSTERIOR",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R03",
+    "recommendation": "Show shape; specify interval and mass",
+    "source": "E03: uncertainty",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "D-AZ; D-GGDIST",
+    "scope": "Which summary is meaningful?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R03-R",
+    "recommendation": "Implement ECDF, HDI, ETI, dot plots using ggdist; posterior quantile.",
+    "source": "E03: uncertainty (statistical reasoning); D-AZ; D-GGDIST",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R04",
+    "recommendation": "Inspect chains and geometry before extending",
+    "source": "E04: synthetic chains",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "scope": "Do chains explore the same target?",
+    "qualification": "direct-eabm; eabm-code; R translated"
+  },
+  {
+    "id": "R04-R",
+    "recommendation": "Implement Trace + rank + R-hat using mcmc_trace; mcmc_rank_overlay; rhat.",
+    "source": "E04: synthetic chains (statistical reasoning); M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R05",
+    "recommendation": "Fix geometry or add draws if stable growth",
+    "source": "E04: ESS",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "scope": "How much usable information?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R05-R",
+    "recommendation": "Implement Bulk/tail ESS; ESS evolution using ess_bulk; ess_tail; subset_draws.",
+    "source": "E04: ESS (statistical reasoning); M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R06",
+    "recommendation": "Compute mean/quantile MCSE in scientific units",
+    "source": "E04: MCSE",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "scope": "Is numerical precision sufficient?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R06-R",
+    "recommendation": "Implement MCSE of reported estimand using mcse_mean; mcse_quantile.",
+    "source": "E04: MCSE (statistical reasoning); M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R07",
+    "recommendation": "Keep all estimation draws; justify diagnostic thinning",
+    "source": "E04: thinning",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "scope": "Should draws be discarded?",
+    "qualification": "direct-eabm; translated"
+  },
+  {
+    "id": "R07-R",
+    "recommendation": "Implement Full sample vs diagnostic thinning using Explicit diagnostic subsample.",
+    "source": "E04: thinning (statistical reasoning); M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R08",
+    "recommendation": "Locate failures; rescale/reparameterize; bounded tuning",
+    "source": "E04: divergences",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "scope": "Where does HMC fail?",
+    "qualification": "direct-eabm; synthesized action order"
+  },
+  {
+    "id": "R08-R",
+    "recommendation": "Implement Divergence-marked pairs; parallel coordinates using mcmc_pairs; cmdstanr sampler diagnostics.",
+    "source": "E04: divergences (statistical reasoning); M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R09",
+    "recommendation": "Inspect per chain; reparameterize",
+    "source": "E04: energy",
+    "evidence_status": "eabm-code",
+    "implementation_source": "M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "scope": "Can HMC traverse energy levels?",
+    "qualification": "eabm-code; method-paper BFMI; translated"
+  },
+  {
+    "id": "R09-R",
+    "recommendation": "Implement Energy transitions; BFMI using mcmc_nuts_energy; diagnostic_summary.",
+    "source": "E04: energy (statistical reasoning); M-RHAT; M-ENERGY; D-STAN; D-POSTERIOR; D-BAYESPLOT",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R10",
+    "recommendation": "Revise justified priors/model then resimulate",
+    "source": "E05: heights",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "scope": "Are observable scales plausible?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R10-R",
+    "recommendation": "Implement Prior predictive + reference values using brms sample_prior=\"only\"; posterior_predict.",
+    "source": "E05: heights (statistical reasoning); M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R11",
+    "recommendation": "Choose quantities exposing a suspected failure",
+    "source": "E05: heights summaries",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "scope": "Which discrepancy matters?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R11-R",
+    "recommendation": "Implement Targeted test quantities using ppc_stat / ppc_stat_grouped.",
+    "source": "E05: heights summaries (statistical reasoning); M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R12",
+    "recommendation": "Use justified reference; randomized discrete PIT; LOO diagnostics",
+    "source": "E05: PIT/coverage",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "scope": "Are predictions calibrated?",
+    "qualification": "direct-eabm; method-paper caveats; partial parity"
+  },
+  {
+    "id": "R12-R",
+    "recommendation": "Implement PIT ECDF; LOO-PIT; coverage using ppc_pit_ecdf / ppc_loo_pit_ecdf.",
+    "source": "E05: PIT/coverage (statistical reasoning); M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R13",
+    "recommendation": "Consider justified count model; rerun targeted PPC",
+    "source": "E05: crabs + notebook",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "scope": "Are zeros and tails modeled?",
+    "qualification": "direct-eabm; eabm-code; translated"
+  },
+  {
+    "id": "R13-R",
+    "recommendation": "Implement Rootogram; zero/tail test quantities using bayesplot PPC; brms families.",
+    "source": "E05: crabs + notebook (statistical reasoning); M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R14",
+    "recommendation": "Cross-validated probabilities; category checks",
+    "source": "E05: binary/ordinal",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "scope": "Does calibration vary with probability?",
+    "qualification": "direct-eabm; R partial"
+  },
+  {
+    "id": "R14-R",
+    "recommendation": "Implement PAVA / cumulative category calibration using Manual isotonic calibration / grouped PPC.",
+    "source": "E05: binary/ordinal (statistical reasoning); M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R15",
+    "recommendation": "Replicate observation process; survival checks",
+    "source": "E05: survival",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "scope": "Is censoring reproduced?",
+    "qualification": "direct-eabm; translated"
+  },
+  {
+    "id": "R15-R",
+    "recommendation": "Implement Survival PPC with censoring using survival estimates + brms posterior_predict.",
+    "source": "E05: survival (statistical reasoning); M-PPC; M-ECDF; D-BAYESPLOT-PPC; D-BRMS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R16",
+    "recommendation": "Check every fit; compare estimands and MCSE",
+    "source": "E06: refitting",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "scope": "Would plausible assumptions change conclusions?",
+    "qualification": "direct-eabm; R translated"
+  },
+  {
+    "id": "R16-R",
+    "recommendation": "Implement Refit alternate priors/likelihoods using brms update / cmdstanr refit.",
+    "source": "E06: refitting (statistical reasoning); M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R17",
+    "recommendation": "Check importance diagnostics; corroborate with refit",
+    "source": "E06: power scaling",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "scope": "What changes under local perturbation?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R17-R",
+    "recommendation": "Implement PSIS weights; CJS-based gradient using powerscale_sensitivity; powerscale plots.",
+    "source": "E06: power scaling (statistical reasoning); M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R18",
+    "recommendation": "Justify effect-scale priors; repeat diagnostics",
+    "source": "E06: body fat",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "scope": "Is a default prior unintentionally informative?",
+    "qualification": "direct-eabm; eabm-code; translated"
+  },
+  {
+    "id": "R18-R",
+    "recommendation": "Implement Predictor scaling + sensitivity using priorsense / brms.",
+    "source": "E06: body fat (statistical reasoning); M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R19",
+    "recommendation": "State perturbation target; select top-level terms for this question",
+    "source": "E06: bacteria hierarchy",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "scope": "Which prior component should be perturbed?",
+    "qualification": "direct-eabm example; synthesized generalization"
+  },
+  {
+    "id": "R19-R",
+    "recommendation": "Implement Selective hyperprior scaling using prior_selection / explicit lprior.",
+    "source": "E06: bacteria hierarchy (statistical reasoning); M-SENSE; M-PSIS; D-AZ-SENSE; D-PRIORSENSE",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R20",
+    "recommendation": "Align likelihood contributions on common observed scale",
+    "source": "E07: likelihood comparability",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "scope": "Are LOO scores comparable?",
+    "qualification": "direct-eabm; translated"
+  },
+  {
+    "id": "R20-R",
+    "recommendation": "Implement Same response/unit/measure using log_lik array.",
+    "source": "E07: likelihood comparability (statistical reasoning); M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R21",
+    "recommendation": "Establish target; compute and diagnose",
+    "source": "E07: predictive accuracy",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "scope": "How does a model predict held-out units?",
+    "qualification": "direct-eabm; translated"
+  },
+  {
+    "id": "R21-R",
+    "recommendation": "Implement PSIS-LOO; pointwise ELPD using loo(r_eff=relative_eff(...)).",
+    "source": "E07: predictive accuracy (statistical reasoning); M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R22",
+    "recommendation": "Report difference/SE and practical consequences",
+    "source": "E07: ELPD differences",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "scope": "How uncertain is model ranking?",
+    "qualification": "direct-eabm; method-paper caveats; translated"
+  },
+  {
+    "id": "R22-R",
+    "recommendation": "Implement Paired differences and SE using loo_compare.",
+    "source": "E07: ELPD differences (statistical reasoning); M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R23",
+    "recommendation": "Inspect data; improve estimate; retain valid observations",
+    "source": "E07: Pareto-k",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "scope": "Is PSIS approximation stable?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R23-R",
+    "recommendation": "Implement Sample-size threshold; influence inspection using pareto_k_table; pareto_k_ids.",
+    "source": "E07: Pareto-k (statistical reasoning); M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R24",
+    "recommendation": "Check post-repair k and scores; refit remaining cases",
+    "source": "E07/E09: repair LOO",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "",
+    "scope": "Can unstable importance sampling be repaired?",
+    "qualification": "direct-eabm; translated"
+  },
+  {
+    "id": "R24-R",
+    "recommendation": "Implement Moment matching; exact refits; K-fold using loo_moment_match; brms loo(reloo=TRUE).",
+    "source": "E07/E09: repair LOO (statistical reasoning); ",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R25",
+    "recommendation": "Diagnose inputs; mix distributions; assess new data",
+    "source": "E07: stacking",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "scope": "Would a predictive mixture help?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R25-R",
+    "recommendation": "Implement Stacking weights using loo_model_weights(method=\"stacking\").",
+    "source": "E07: stacking (statistical reasoning); M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R26",
+    "recommendation": "Nest selection or reserve test data",
+    "source": "E07: selection",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "scope": "Does searching many models bias evaluation?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R26-R",
+    "recommendation": "Implement Search-aware CV / projection using projpred cv_varsel / nested evaluation.",
+    "source": "E07: selection (statistical reasoning); M-LOO; M-PSIS; M-STACK; D-LOO; D-LOO-K",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R27",
+    "recommendation": "Lazy likelihood; shared indices; enlarge until precision adequate",
+    "source": "E08 + wells script",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "",
+    "scope": "Can comparison fit the memory budget?",
+    "qualification": "direct-eabm; eabm-code; translated"
+  },
+  {
+    "id": "R27-R",
+    "recommendation": "Implement Surrogate + common random subsample using loo_subsample; update.",
+    "source": "E08 + wells script (statistical reasoning); ",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R28",
+    "recommendation": "Validate q; check corrected PSIS; MCMC subset check",
+    "source": "E08: approximate posterior",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LARGE; M-LARGE-2019; D-AZ-SUB; D-LOO-SUB",
+    "scope": "Can an approximate fit support LOO?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R28-R",
+    "recommendation": "Implement p/q density correction using loo_approximate_posterior.",
+    "source": "E08: approximate posterior (statistical reasoning); M-LARGE; M-LARGE-2019; D-AZ-SUB; D-LOO-SUB",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R29",
+    "recommendation": "Continue criticism and consider count likelihood revision",
+    "source": "E09 + roaches script",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "",
+    "scope": "Does repaired LOO fix model misfit?",
+    "qualification": "direct-eabm; synthesized safeguard"
+  },
+  {
+    "id": "R29-R",
+    "recommendation": "Implement Poisson PPC + post-MM diagnostics using brms; loo_moment_match.",
+    "source": "E09 + roaches script (statistical reasoning); ",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R30",
+    "recommendation": "Explicitly define held-out block and available outcomes",
+    "source": "E10 + laliga notebooks",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "",
+    "scope": "What does one observation mean?",
+    "qualification": "direct-eabm; eabm-code; translated"
+  },
+  {
+    "id": "R30-R",
+    "recommendation": "Implement Select, sum, or concatenate likelihoods using Aligned log_lik arrays; sum/concatenate.",
+    "source": "E10 + laliga notebooks (statistical reasoning); ",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R31",
+    "recommendation": "Integrate new effects or refit grouped folds",
+    "source": "E10: teams",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-LOO; D-AZ; D-LOO",
+    "scope": "Can the model predict a new group?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R31-R",
+    "recommendation": "Implement Leave-group-out; grouped K-fold using brms kfold(group=...) / explicit folds.",
+    "source": "E10: teams (statistical reasoning); M-LOO; D-AZ; D-LOO",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R32",
+    "recommendation": "Validate reference model; inspect conditional structure",
+    "source": "E11: BART",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PROJ; D-KULPRIT; D-PROJPRED",
+    "scope": "Which predictors drive predictive structure?",
+    "qualification": "direct-eabm; partial parity"
+  },
+  {
+    "id": "R32-R",
+    "recommendation": "Implement VI; pruning; partial dependence using Separate verified BART workflow if needed.",
+    "source": "E11: BART (statistical reasoning); M-PROJ; D-KULPRIT; D-PROJPRED",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R33",
+    "recommendation": "Check reference; project; validate chosen size",
+    "source": "E11: Kulprit",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-PROJ; D-KULPRIT; D-PROJPRED",
+    "scope": "Can a smaller model preserve predictions?",
+    "qualification": "direct-eabm; translated; partial implementation parity"
+  },
+  {
+    "id": "R33-R",
+    "recommendation": "Implement Projection from reference posterior using projpred cv_varsel/suggest_size.",
+    "source": "E11: Kulprit (statistical reasoning); M-PROJ; D-KULPRIT; D-PROJPRED",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R34",
+    "recommendation": "Document constraints; verify quantiles and predictive implications",
+    "source": "E12: quantiles/entropy",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "D-PRELIZ; D-SHELF",
+    "scope": "Can domain statements become priors?",
+    "qualification": "direct-eabm; translated"
+  },
+  {
+    "id": "R34-R",
+    "recommendation": "Implement Quantile matching; max entropy constraints using Base R quantiles / optim; SHELF where suitable.",
+    "source": "E12: quantiles/entropy (statistical reasoning); D-PRELIZ; D-SHELF",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R35",
+    "recommendation": "Use external targets at design points; iterate",
+    "source": "E12: predictive elicitation",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "D-PRELIZ; D-SHELF",
+    "scope": "Do chosen priors reproduce conditional expectations?",
+    "qualification": "direct-eabm; partial parity"
+  },
+  {
+    "id": "R35-R",
+    "recommendation": "Implement Prior simulations across X; experimental PPE using Manual predictive simulation; no full PPE analogue.",
+    "source": "E12: predictive elicitation (statistical reasoning); D-PRELIZ; D-SHELF",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R36",
+    "recommendation": "Validate generator; record failures; inspect ranks and diagnostics",
+    "source": "E13: SBC",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SBC; M-SBC-PRIOR; M-SBC-POST; D-SBC; D-SIMUK",
+    "scope": "Does implementation produce calibrated inference?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R36-R",
+    "recommendation": "Implement Simulate prior\u2192data\u2192posterior ranks using SBC generator/backend/compute_SBC.",
+    "source": "E13: SBC (statistical reasoning); M-SBC; M-SBC-PRIOR; M-SBC-POST; D-SBC; D-SIMUK",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R37",
+    "recommendation": "Add likelihood and scientific test quantities",
+    "source": "E13: test quantities",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SBC; M-SBC-PRIOR; M-SBC-POST; D-SBC; D-SIMUK",
+    "scope": "Could parameter ranks miss a bug?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R37-R",
+    "recommendation": "Implement Joint log-likelihood / derived ranks using SBC derived quantities.",
+    "source": "E13: test quantities (statistical reasoning); M-SBC; M-SBC-PRIOR; M-SBC-POST; D-SBC; D-SIMUK",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R38",
+    "recommendation": "Use verified conditional method; state local scope",
+    "source": "E13: posterior SBC",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-SBC; M-SBC-PRIOR; M-SBC-POST; D-SBC; D-SIMUK",
+    "scope": "Is inference faithful near these data?",
+    "qualification": "direct-eabm; method-paper; partial parity"
+  },
+  {
+    "id": "R38-R",
+    "recommendation": "Implement Conditional SBC with augmented posterior using Custom SBC workflow; method-specific implementation.",
+    "source": "E13: posterior SBC (statistical reasoning); M-SBC; M-SBC-PRIOR; M-SBC-POST; D-SBC; D-SIMUK",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R39",
+    "recommendation": "Report model, checks, caveats and reproducible artifacts",
+    "source": "E14: reporting",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-REPORT; M-VIS",
+    "scope": "Can a reader assess reliability?",
+    "qualification": "direct-eabm; method-paper; translated"
+  },
+  {
+    "id": "R39-R",
+    "recommendation": "Implement Audience layers; diagnostics/sensitivity/model alternatives using posterior; tidybayes; ggdist.",
+    "source": "E14: reporting (statistical reasoning); M-REPORT; M-VIS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "R40",
+    "recommendation": "Classify failure; choose smallest justified intervention; recheck",
+    "source": "E15: iteration",
+    "evidence_status": "direct-eabm",
+    "implementation_source": "M-VIS",
+    "scope": "What should be checked next?",
+    "qualification": "direct-eabm; synthesized executable routing"
+  },
+  {
+    "id": "R40-R",
+    "recommendation": "Implement Question-led iterative workflow using Language-independent routing.",
+    "source": "E15: iteration (statistical reasoning); M-VIS",
+    "evidence_status": "translated",
+    "scope": "R implementation; verify target and API feature parity"
+  },
+  {
+    "id": "S01",
+    "recommendation": "Classify computational, geometry, prior, misspecification, predictive instability and scientific failures before choosing an intervention.",
+    "source": "E04\u2013E15",
+    "evidence_status": "synthesized"
+  },
+  {
+    "id": "S02",
+    "recommendation": "Order interventions by diagnosed mechanism and rerun the checks affected by a revision; tuning alone is not a general divergence remedy.",
+    "source": "E04; M-RHAT; D-STAN",
+    "evidence_status": "synthesized"
+  },
+  {
+    "id": "S03",
+    "recommendation": "Check importance diagnostics at every power-scaling alpha and corroborate consequential local results with justified refits.",
+    "source": "M-SENSE; M-PSIS; D-PRIORSENSE",
+    "evidence_status": "method-paper"
+  },
+  {
+    "id": "S04",
+    "recommendation": "Do not compare a single SBC posterior to its prior; use truth/posterior exchangeability over repeated simulations and data-dependent quantities.",
+    "source": "M-SBC-PRIOR; M-SBC",
+    "evidence_status": "method-paper"
+  },
+  {
+    "id": "S05",
+    "recommendation": "Do not infer causal adjustment or causal importance from predictive variable selection.",
+    "source": "E11 predictive scope; scientific estimand reasoning",
+    "evidence_status": "synthesized"
+  },
+  {
+    "id": "S06",
+    "recommendation": "Use original-plus-simulated information for the posterior SBC conditional construction.",
+    "source": "M-SBC-POST; D-SIMUK",
+    "evidence_status": "method-paper"
+  },
+  {
+    "id": "S07",
+    "recommendation": "Use tri-state executable gates: unknown evidence requests a check, not an assertion that it passed.",
+    "source": "E15 iterative reasoning",
+    "evidence_status": "synthesized"
+  },
+  {
+    "id": "S08",
+    "recommendation": "Treat sampled large-data LOO units as a probability sample and report subsampling uncertainty; unsampled units were not individually checked.",
+    "source": "E08; M-LARGE",
+    "evidence_status": "method-paper"
+  },
+  {
+    "id": "S09",
+    "recommendation": "Treat a stronger prior as a scientific information/regularization choice validated by induced predictions and sensitivity.",
+    "source": "E05; E06; E12",
+    "evidence_status": "synthesized"
+  },
+  {
+    "id": "S10",
+    "recommendation": "Main text/methods/supplement/reproduction placement is an audience-oriented reporting synthesis.",
+    "source": "E14; M-REPORT",
+    "evidence_status": "synthesized"
+  },
+  {
+    "id": "API01",
+    "recommendation": "Use negative log ratios with arviz-stats 1.3 array_stats.psislw; use raw log ratios with R loo::psis and legacy ArviZ. Verify weights on the same draws.",
+    "source": "D-AZ-STATS installed _psislw source; D-LOO installed source; runtime parity",
+    "evidence_status": "translated",
+    "scope": "implementation sign convention, not a book recommendation"
+  },
+  {
+    "id": "API02",
+    "recommendation": "For simuk 0.3 run_simulations, read .simulations and check retained/completed fits; the method returns None.",
+    "source": "D-SIMUK installed source and two-fit runtime smoke test",
+    "evidence_status": "synthesized",
+    "scope": "official API implementation guard"
+  }
+]

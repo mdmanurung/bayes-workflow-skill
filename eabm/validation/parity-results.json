@@ -1,0 +1,30 @@
+{
+  "base": {
+    "max_abs_elpd_language_difference": 1.143379213530693e-06,
+    "max_abs_k_language_difference": 0.004884216220808601,
+    "max_abs_psis_minus_exact": 0.0037622187865062,
+    "rhat_python": 1.0004217,
+    "rhat_r": 1.00042170331124,
+    "ess_bulk_python": 6020.54259589,
+    "ess_bulk_r": 6020.54259588574,
+    "mcse_python": 0.00198294,
+    "mcse_r": 0.0019829369425142
+  },
+  "strong": {
+    "max_abs_elpd_language_difference": 9.480979024090175e-07,
+    "max_abs_k_language_difference": 0.01225452047849239,
+    "max_abs_psis_minus_exact": 0.0005845786124951,
+    "rhat_python": 0.99974333,
+    "rhat_r": 0.999743331890379,
+    "ess_bulk_python": 5641.51063034,
+    "ess_bulk_r": 5641.51063034272,
+    "mcse_python": 0.00164072,
+    "mcse_r": 0.0016407233991531
+  },
+  "weight_diagnostics": {
+    "max_abs_k_difference": 0.021889671116867904,
+    "max_abs_ess_difference": 0.07618486838327954,
+    "worst_k": 0.2253691691470604
+  },
+  "scope": "Shared independent analytic draws; differences reflect implementation details/numerics, not independent fits."
+}

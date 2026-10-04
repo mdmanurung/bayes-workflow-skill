@@ -1,0 +1,14 @@
+interface:
+  display_name: Bayesian Modeling Workflow
+  short_description: Build, diagnose and refine scientific Bayesian models
+  default_prompt: Use $bayesian-modeling-workflow to develop or review this Bayesian
+    analysis, diagnose specific failures, and propose validated next steps.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

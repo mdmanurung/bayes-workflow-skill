@@ -1,0 +1,297 @@
+path	role	bytes	lines	sha256	inspection
+.Bayesian-Workflow-root	presentation/build	0	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	inventoried: image/style/build artifact; no modeling rule extracted
+.gitignore	presentation/build	3931	165	b51c72a43a17df5da297b1ec6ea1904e0ed5a25ea62579d13fbf123fdfd8a3da	inventoried: image/style/build artifact; no modeling rule extracted
+9780367490188.png	presentation/build	215204	1490	181fcbe7e208ab0b823b1a2d4177d81054e9066f758f16e9f8570bac76f6c43d	inventoried: image/style/build artifact; no modeling rule extracted
+Bayesian-Workflow.Rproj	presentation/build	205	13	3a81ccc25a62f1a31c7d3404389935ced50831abea5e848408745ad1a1bf6126	inventoried: image/style/build artifact; no modeling rule extracted
+README.md	navigation/documentation	180	6	60448f06bc61163f0456a76ad21d962fce113857c930faad1054b58355d58f46	reviewed: navigation, prose, references or example documentation
+_quarto-draft.yml	navigation/documentation	522	20	7930772c6173484311fd8d691c30fa18c4e2e496c84992c4f12886ab04187a4c	reviewed: navigation, prose, references or example documentation
+_quarto.yml	navigation/documentation	4641	105	b6c0132d26fed20ecd87a3fddafeafc4a6d9ef1f915983fe5581bff92384abfd	reviewed: navigation, prose, references or example documentation
+_styles.css	presentation/build	1029	32	5e6a1a9cf7335e5bba71b3fb32682d3b75f32ec8954b47ed09d3ead21346e7c3	inventoried: image/style/build artifact; no modeling rule extracted
+bioassay/bioassay.R	analysis/helper	11257	342	aefd012f1b41dddaa5cfa4c999b7ad5a8ce676f54815c011ce2a375c7446a20a	reviewed: prose/model/diagnostic sequence
+bioassay/bioassay0.stan	model	188	13	ba22d65ce4464a2413a33e958b1453e1de424b3e26d650f94901a5b78292bc96	reviewed: declarations, prior, likelihood, generated quantities
+bioassay/bioassay1.stan	model	225	14	06da2d4e8c767d92b63a963578d31dca522c4c09985419dbc61230ac1a766f97	reviewed: declarations, prior, likelihood, generated quantities
+bioassay/data/bioassay.csv	data	61	5	ab0a23d445152b7dcb12128c322493b90c7fab5adaa204184fada48cef0f40d5	inspected: format/schema/use in analysis; not reproduced empirically
+birthdays/birthdays.R	analysis/helper	100724	2243	e607b99880c228c29aafbde198df93db5866ccf6b69611ffe1682a4c40021ab6	reviewed: prose/model/diagnostic sequence
+birthdays/data/README.txt	data	483	16	d70524ca3f3262bf6e63aaec7f14e8f04dc9f61177f0f8421ebebe2216063c87	inspected: format/schema/use in analysis; not reproduced empirically
+birthdays/data/births_usa_1969.csv	data	223752	7306	12fc497f86f5dcd801583639f5cdb8823c766713edb6ba713aea444a4e7e2e91	inspected: format/schema/use in analysis; not reproduced empirically
+birthdays/gpbasisfun_functions.stan	model	908	18	4c615be5b5925773e9d8bd5d6c8b6b02b3ebbe4051bd7a6dbbf1ff61ef389e6e	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf1.stan	model	1675	54	c47d1e60759f1cf60bfe8b2fd81855d751cb305da4fad1d94b8cfd9f368a1055	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf1b.stan	model	1598	52	a779346c912557a0f2d96d485e86e473aaade71995ecced0e035add40570e61b	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf2.stan	model	2456	73	c1d7c158b854f709cab8ceffb1af8ad56ecd7eed70280b0f0962978a525ab995	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf3.stan	model	3007	84	cd5ae4ff22ce2a3d0ae4b770a1f0f84e4780433faf0d443693efccab9f3acf2e	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf4.stan	model	3830	101	65b04afbca4c57ed7888adcbea1c58954027065ff85f3cdd3b9ac3929481cf6e	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf5.stan	model	4927	120	7e773c973b576e5f6572030086519b31d97d163f69f4d27b75db82e9370eda2e	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf6.stan	model	3254	89	09786b543f07a0359e5352e9c2dc3ccfd1d42f6f948dcf17c43ce8ace80fdb3c	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf7.stan	model	4051	104	a9845074265d237b4bdf3fb30c864d81b0974c9b70438466aa088913af0cc679	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf8.stan	model	4863	119	48f9897c3e527c5e8c56984a2c830ab279b3b8a56cc6be70540518d6b842d7e9	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf8rhs.stan	model	5706	136	9491f7d2bafcd646aec4aba6e9172f397278f0a919ccbbfd4769bbe2d258e778	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf8rhs_nogq.stan	model	4389	107	19657d010f8194288c57c580cc732878bb839ac13195409902831f75c56b1bfc	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/gpbf8tnu.stan	model	4921	121	8d80d393043fe9ade4aa2d3af06c57092fba05f0e91433f7d92b8547d51e26f3	reviewed: declarations, prior, likelihood, generated quantities
+birthdays/plot_helpers.R	analysis/helper	14396	357	5522028caa508e4bc037408c0190c93800817fd2e6a7138a92334ec2b725c318	reviewed: prose/model/diagnostic sequence
+casestudies.bib	navigation/documentation	25242	735	a96f8ecd737baad41536646d1c34bfcc7809cf57d833aaf39559307fef85e096	reviewed: navigation, prose, references or example documentation
+casestudies.qmd	navigation/documentation	6187	131	956425c5556c8feb3a215de610bb9164873087461c8da861ac1fb64238f174d8	reviewed: navigation, prose, references or example documentation
+cat_adoptions/adoptions_censored.stan	model	426	21	f3dc370d69193eca7c40065b71f4797eb6e9208cf676d6fb52434ccda6d5eab1	reviewed: declarations, prior, likelihood, generated quantities
+cat_adoptions/adoptions_imputation.stan	model	511	23	654cdb38d938496409de5b9b84fed1ff355701a08a00c05722155a392403c14d	reviewed: declarations, prior, likelihood, generated quantities
+cat_adoptions/adoptions_observed.stan	model	410	21	fde276aa3f77c3c0f1670ab1b50813aa7155a40a365aeb89c153577ad8d756d2	reviewed: declarations, prior, likelihood, generated quantities
+cat_adoptions/adoptions_poisson.stan	model	288	14	8a6775dc657cb52261e2afb6886c46f2b28346d89dd3ba0cebb61473bc2e96a2	reviewed: declarations, prior, likelihood, generated quantities
+cat_adoptions/adoptions_varying.stan	model	686	28	dc14c3c1158c5f9e14e96f799cf8c9e7eadc844080441a0e81fb5f9d7029cbe4	reviewed: declarations, prior, likelihood, generated quantities
+cat_adoptions/cat_adoptions.R	analysis/helper	17881	550	30168533eebd4298378da46fc71e25579b278e0375086804c1d8c1aa0d4eab43	reviewed: prose/model/diagnostic sequence
+cat_adoptions/data/austin_cats.csv	data	2758326	22357	66e1019848e011e13053e0e7e8be3c5e33b0d3b9cc308dad595dd8e164138fbc	inspected: format/schema/use in analysis; not reproduced empirically
+coronavirus/coronavirus.R	analysis/helper	16385	508	cefb37c49c1c038172035d1f75de7dc8f4d35dda0bdf1b757f08ab574cbe6ead	reviewed: prose/model/diagnostic sequence
+coronavirus/prior-sensitivity.stan	model	1761	55	94f2328d61ded3f91fc911dffeb16317b1decb810a9900c669599ae641e4c01f	reviewed: declarations, prior, likelihood, generated quantities
+coronavirus/santa-clara-hierarchical-mrp.stan	model	3748	90	700889d89ba669f8bee9ee8d71bd603ee7eaae7f38e6c94eeab038886ed37bf9	reviewed: declarations, prior, likelihood, generated quantities
+coronavirus/santa-clara-hierarchical.stan	model	1429	42	65ce1e56264b614271bc4aac4f1b294baa4f2e2308c0df9e4edd1a5ea8ea9084	reviewed: declarations, prior, likelihood, generated quantities
+coronavirus/santa-clara.stan	model	536	19	a863be5fdb4a553fce701f84437d5dff4b1640ce013087c23f5a8e4da7b50803	reviewed: declarations, prior, likelihood, generated quantities
+declining_exponentials/declining_exponentials.R	analysis/helper	17657	460	702e31f35ad0fd618b857e220556dd89a12b8ec2b5f9e48a35115ee109d74860	reviewed: prose/model/diagnostic sequence
+declining_exponentials/declining_exponentials.Rmd	analysis/helper	15641	448	cc88c540f1878ff2c3f88e26474635a1c835674c76fcd948bc4e7a296eddb88d	reviewed: prose/model/diagnostic sequence
+declining_exponentials/exponential.stan	model	221	16	603f3fe68f2292ea75f5212dd24e43bd64c58da2756f4e5fae3561ea016b24bf	reviewed: declarations, prior, likelihood, generated quantities
+declining_exponentials/exponential_positive.stan	model	239	16	8c939b8834d3b0049a3a493f0dad988d38ec82e44b3f2103ac6c06165292b60c	reviewed: declarations, prior, likelihood, generated quantities
+declining_exponentials/exponential_positive_lognormal.stan	model	276	17	ddb3b232994e3af0b9506482b02ba6907566a9719ea1078905dee0bf23018385	reviewed: declarations, prior, likelihood, generated quantities
+declining_exponentials/sum_of_exponentials.stan	model	250	14	d931c4b2a5b08dac5e544cb1ca0eca02f1f3cf4faaa2c1c6522146da1a7878c4	reviewed: declarations, prior, likelihood, generated quantities
+declining_exponentials/sum_of_exponentials_with_priors.stan	model	314	17	c09a164bd391b00137f09cfd9e0fc1fd4081ce5b69b1fac6e8c61fc977593c72	reviewed: declarations, prior, likelihood, generated quantities
+digits/data/kilpisjarvi-summer-temp.csv	data	1392	63	8aaccc75a31a630954bf04ca8def2145226703d59675ebf9ef9142f96889f355	inspected: format/schema/use in analysis; not reproduced empirically
+digits/data/readme.txt	data	614	17	a2fdc2be58cc397941e023bfeb9aea80a1e526d1a8c62dca987fd3a77be20f0f	inspected: format/schema/use in analysis; not reproduced empirically
+digits/digits.R	analysis/helper	23602	520	8e9700ed4356e84f67d4c50e315455a49f1b46687b889b3b29502ee715b7e37f	reviewed: prose/model/diagnostic sequence
+digits/linear.stan	model	1050	28	6829edf3b014bf8472885137b1310b6bdf7dc52bf4d062d8b91c08ceceecba9a	reviewed: declarations, prior, likelihood, generated quantities
+dogs/data/dogs.dat	data	1706	32	4097ca39fb89ba69528bf4c722ab9f22281caaa56d224d118bcd3c925d623cd5	inspected: format/schema/use in analysis; not reproduced empirically
+dogs/dogs.R	analysis/helper	29879	758	f139ff4ed578ad7c0f23f6337d2e10a7f3315272fd8279d6055b3701f36f1a8f	reviewed: prose/model/diagnostic sequence
+dogs/dogs_0.stan	model	543	33	2a8a39b40d1cf92e6e6a884654c025395aa20035f9070b7ae818640a0f471398	reviewed: declarations, prior, likelihood, generated quantities
+dogs/dogs_1.stan	model	524	32	e99dec5d484247ee4ecf3bb8936b14bcac4fa612c843b2663a5b2cac09e7dd5e	reviewed: declarations, prior, likelihood, generated quantities
+dogs/dogs_2.stan	model	1102	49	f1a577890c3d9d0298456d11c616bf871ba04d9367dba5496b9c5acd6f911a1e	reviewed: declarations, prior, likelihood, generated quantities
+dogs/dogs_3.stan	model	653	36	fd4f183c365ef979453f064e0143fedd9f66cdd85720773d73152ef2c7e4f08d	reviewed: declarations, prior, likelihood, generated quantities
+dogs/dogs_4.stan	model	1507	58	c4de419eae23b23db93d81dd6578fd8e06a4a5f14b44660521064da1095d5d81	reviewed: declarations, prior, likelihood, generated quantities
+dogs/dogs_5.stan	model	1819	65	182642062894934901e8d5a1304787203103cd8279ca46ace44b01ce172db1c7	reviewed: declarations, prior, likelihood, generated quantities
+dogs/dogs_stan.R	analysis/helper	10261	328	a4675a12f68c395fed503bcde58b92e85845761cd4daaf8ee2272be4e6fc6cd6	reviewed: prose/model/diagnostic sequence
+errata.qmd	navigation/documentation	23094	222	40b236a67a406cc9ca785756b345a70e7d4f1b641e58428e90a5671c2ec08d64	reviewed: navigation, prose, references or example documentation
+exercises.qmd	navigation/documentation	5923	81	af1bd651d27df618a808c85bd053748c9153327f82cc18e20d34940703438741	reviewed: navigation, prose, references or example documentation
+exercises/README.md	navigation/documentation	155	4	88b6ac87a32cac53bc4c0fbe89161f237b4e9a8761ee502b4afcaec09ae0dbae	reviewed: navigation, prose, references or example documentation
+exercises/chapter_05/Monks.csv	data	5006	154	122fc96d58ed32377c68aae632edc0820541923e2c41ebbc714894d46d30afa3	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_05/README.md	navigation/documentation	319	7	f12d0bc46e4ffd18518cd409b72e06a9fc7105d4c3f9ae8cd5fe9b5f306cf2aa	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/2008ElectionResult.csv	data	2066	52	f2c9de4e239c0a532f75c294275877f4b2342b0a809cfdc862ae21b03de13347	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_06/BMJSubmissions.csv	data	2301190	1024	29bf89c4c8dcf938b29fef623bda4183095fe5cf2b6cbb88d881a9723d7d83f1	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_06/README.md	navigation/documentation	523	6	97beb48fd1cf8c9cd0128a85f16d1b2d38de7ba6860ae6dde838b0d72b418381	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/cdc/US-EST00INT-ALLDATA.csv	data	311043	1132	8ddb051141b3e7a0c8aab22dc78ea00d75f3f56d8ca9ec0dba5abf0d548775e5	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_06/cdc/births.R	analysis/helper	9600	193	123b798583c286d3c450f14ec6204ac01147cfb130044889634f21f10db40cf1	reviewed: prose/model/diagnostic sequence
+exercises/chapter_06/cdc/births.txt	navigation/documentation	1601	80	7c57b36d894f38e7b2d0acbafb132be5987df0d524d0a9df28f4516624e91d08	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/cdc/black_death_rates_from_1999_to_2013_by_sex.txt	navigation/documentation	26196	901	9c105f43766c062ab2ab2dcaae7833a206e92f5d2672bd1b40ef3799046a81aa	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/cdc/deaton.txt	navigation/documentation	903	11	c719c5c8688f642a79ac0cf0ce0d7f6b2ba566bd9a200163fa1e7958916f5150	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/cdc/white_hisp_death_rates_from_1999_to_2013_by_sex.txt	navigation/documentation	25199	901	42a7e0b5d2717b19109ed1f003fde6a6866d23cbad9fdef0ef64ff95b04ef8b6	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/cdc/white_nonhisp_death_rates_from_1999_to_2013_by_sex.txt	navigation/documentation	27218	901	95b7e9d36d20626c5e0e3bc89d5d0f195a8e46fe127f84f2289582befab1b7c3	reviewed: navigation, prose, references or example documentation
+exercises/chapter_06/pew_research_center_june_elect_wknd_data.dta	data	3016830	28118	e09de763c1cd71844b9212afece9f0bac638adfe25c908de2cd60a2445ffbbb1	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_07/Achehunting.csv	data	397547	14365	374ef453189b12fbed3234aecd639e52311369a0cd6da0bda8ec51b8ab80d839	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_07/README.md	navigation/documentation	299	4	7f1820cdf9153b8cf5b90272a8b3579eac03d599dfdf208f8aa8255c7dab6d33	reviewed: navigation, prose, references or example documentation
+exercises/chapter_07/incentives_data_clean.txt	navigation/documentation	7549	115	4728a341068b51e8c697891dfb22c2dd6bae4a7d1a185f6d57002f3e3a2fc8d1	reviewed: navigation, prose, references or example documentation
+exercises/chapter_08/README.md	navigation/documentation	259	3	670ab33e7c30f8c485f01915c9475b90f4615bf8bbf91435c683b24cb0f8ee09	reviewed: navigation, prose, references or example documentation
+exercises/chapter_08/nba2023.txt	navigation/documentation	1513	32	ce2a4eace47916e2a6543120fcea08f1f0366fdad1963e380803adb172bdd0f1	reviewed: navigation, prose, references or example documentation
+exercises/chapter_11/README.md	navigation/documentation	152	3	f731070679aca9ae21054d94f7b142e28ded92d03134b7c863128d5e968f0565	reviewed: navigation, prose, references or example documentation
+exercises/chapter_11/naes04.csv	data	3248689	81423	980e53676169752493dd3b8b8b23a1b714f70e217342ecb59a64756de009554e	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_13/README.md	navigation/documentation	197	5	fb849c59812df6ec35b73a99f1e797a2a8fed9a62ae5c42e6abb716b8dab4b7f	reviewed: navigation, prose, references or example documentation
+exercises/chapter_13/cd4.csv	data	73743	1255	5d8f826e9d21c8560f14b9e9531037c70c87441320cb824599ed30e802b9619e	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_25/README.md	navigation/documentation	690	21	b89ed91c5b5bedcee9edb9918f17b0dd5f2d26adfb99ce0ecbb2fc361ca5b6e5	reviewed: navigation, prose, references or example documentation
+exercises/chapter_25/StrokeExportDefinitions.pdf	data	2949358	25373	5bcecfc1cc65b181d01124ca46dbe3c333df93e937eec1ed1241720cd4f070ef	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_25/pga-tour-2024.rds	data	30873443	150923	56ffaf6f8963f660f1429231024351d1ee853a6fa7723f19b44cb506d422cacc	inspected: format/schema/use in analysis; not reproduced empirically
+exercises/chapter_27/README.md	navigation/documentation	1061	19	8f6ce076499f56c729b38ed74a56066559949a12c38e04bf9e90c6d3fe1986f7	reviewed: navigation, prose, references or example documentation
+exercises/chapter_27/US-2000-2014-SSA.txt	navigation/documentation	64506	669	9068cab757e53b08fbc0a1fe3cc53398e5a6f55b7b39bac6ab4c78ae9376cb53	reviewed: navigation, prose, references or example documentation
+exercises/chapter_27/clean_cdc_birth_data.csv	data	97490	3653	42a9c730a5198ecd3d287ac3122de9a3f1a35c12d3ca9cdc64f406b8f25ed6e0	inspected: format/schema/use in analysis; not reproduced empirically
+golf/data/golf_data.txt	data	268	22	7501362be074fc131befcde4be7f16803bb56f725a8b6ecee9485c1edca0cb78	inspected: format/schema/use in analysis; not reproduced empirically
+golf/data/golf_data_new.txt	data	597	34	88cc3f69791b0cbeea2d44ec78d8375d90eace3c28fe5529aa477d67623a6353	inspected: format/schema/use in analysis; not reproduced empirically
+golf/golf.R	analysis/helper	47513	1133	d32bf01469ed6e706972df4c744d86c437b1267149374ebfc5f277780498893a	reviewed: prose/model/diagnostic sequence
+golf/golf_angle_binomial.stan	model	346	21	2b66991c4752cb60140bb83ca5a45fd8d265f3fbd35d22fbf16125fd33b474c2	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_4.stan	model	936	34	12238ade38104e17cc6d4db18f7bb7569bff5453269a5f2b37c907bdf5233a7c	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial.stan	model	680	28	21d96fa18aa3035d75cb9a84d2f49784c74de0fc5cfca0135be87d184a1d85f3	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_constant_errors.stan	model	901	35	f5aaf7a804dd562de8a159061d45a4b9f00f0add0cc5d93a78177e1c89625d9d	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_constant_errors_2.stan	model	963	35	369e8680a9d95a8b45a436b613cba22ffcf533fe813d6ce37a1a7020a4e0d305	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_constant_errors_3.stan	model	1072	36	2347dc7b1f3c168272480925c4d67f96ad25b65cc4faca69c719bb8993e5b6aa	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_logit_errors.stan	model	804	32	c74958d015b390692d1cb47d58b3e17484512fb855b1041a5719865898e2c41e	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_proportional_errors.stan	model	971	36	4848db8e125bc2991221fa76bf1098fc2e23212257cbcd653ea498b9b0ec8b5f	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_proportional_errors_2.stan	model	1033	36	23a794af686990de0703879b5334c9869bd6e2de92f4db9df7377a9142ac80dc	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_binomial_with_proportional_errors_3.stan	model	1078	37	0c29f09ea4e81ecf164fdc3f86510662f96644d861e68bca9335107b56c392fe	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_normal.stan	model	842	31	a6e0ef27959198a62ac34877c923e1ce72af4ebb8fa606ac3674e709f4356b50	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_angle_distance_normal_with_resids.stan	model	921	33	8ab5640d8cf7fbd1e87e2725d05b703aa13c73ad73b4837c16d152a161e6ba64	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_log_lik.stan	model	1025	35	5c41e81e6b2a78a7d5bb4cbd998fafd764af5265876c640cf9ae7ab4eb81d111	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_log_lik_constant_errors.stan	model	204	14	98d4b85a0de5ddf0ec1472a01778d68352d464face6b2dfbcebf4107aed03718	reviewed: declarations, prior, likelihood, generated quantities
+golf/golf_logistic.stan	model	148	13	80cfbd8f3e2679fcbd1c059dba7180e9b9b6c0b63f973cc974e9865674fd9994	reviewed: declarations, prior, likelihood, generated quantities
+index.qmd	navigation/documentation	6621	165	6e2dfbbf70505f5e466ec5a9d91371c840f4367f7d63bb97c0915b3737a08b59	reviewed: navigation, prose, references or example documentation
+loo_comparison/loo_comparison.R	analysis/helper	22468	493	959f7efe3fcfd4f7ae9c5af1015f8ecc960a5a9e47c938418da663ac25f06b77	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_02/schools_data.txt	navigation/documentation	421	10	7cafc6c9881233d63de804aae97f817aa3f1029f5ad1694b39d57c234ed378c9	reviewed: navigation, prose, references or example documentation
+misc/chapter_05/section_05_06/CochraneEffects.csv.zip	data	7100044	49573	eb1b908baaab7d71ae8fa643a3b472f2d41b25eea07b586785f28b6df5e619d9	inspected: format/schema/use in analysis; not reproduced empirically
+misc/chapter_05/section_05_06/README.md	navigation/documentation	728	3	09453571a8d5e56bba98a3dc7f51f9d6f908401f9662760826897947fd3577be	reviewed: navigation, prose, references or example documentation
+misc/chapter_05/section_05_06/rpp_data.csv	data	259389	169	ed9465296c46211a7fa63d89435e429d41cfad2b103ff4dfba26881e89f68f15	inspected: format/schema/use in analysis; not reproduced empirically
+misc/chapter_05/section_05_06/z-scores.Rmd	analysis/helper	12912	405	a6d060bbba90af1733693903078cc55af630cf21e1bcf7d98029eec0d0da4dc8	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_09/kilpis_priorcheck.R	analysis/helper	2793	92	0fe92c49ee76af2bc02a131b125b0f490d133939617b7c6b2959a9effa22bda9	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_09/logistic_priorcheck.R	analysis/helper	1629	61	5f14dc2a10722e497740474e682ed3b989ec53cca6cace79b8cd87fd39e1f90e	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_09/prior_predictive_simulations.R	analysis/helper	1459	39	22773e1c4cea37152a864585de3e2be535e12cd41462d4310bc5d758d652132b	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_10/bayesian_tails.R	analysis/helper	5917	163	1358d2c82ebfc7d04fdd1b3f6fca030414284428347deb3268536a32731400a4	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_10/bias.stan	model	185	13	8e2bca42637ed9302b5c25cac5f3b79d0c0762f90ff0c0406d83506d502f2ddf	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_05/section_05_10/cauchy.stan	model	147	12	125cb4d7415071d0c7c0789b5ba94ac8f4d5200703d23891db64345d687651e5	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_05/section_05_10/logit_priors.R	analysis/helper	1392	23	51e01aa81fb79d6ddeaafe84bb87bdd7c02cc1dd4913686f7faccf6f7f83fe5f	reviewed: prose/model/diagnostic sequence
+misc/chapter_05/section_05_10/normal.stan	model	147	12	92ce048873059fbc6da57dc5d416a8c27952b5ea11c41889106317552b4f8bbe	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_06/section_06_01/linear.stan	model	160	12	bdf5d9257dc988e3e39e089ee416bdfa1600053b9714985a8ffabc8ccb356156	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_06/section_06_01/linear_case_study.R	analysis/helper	2409	65	8a6d4f0fd58168910e55d37d435477c8e47dac7fd7cf24cbecf604c93487f33b	reviewed: prose/model/diagnostic sequence
+misc/chapter_06/section_06_01/linear_with_pred.stan	model	290	17	16e91d38e797f22ac9a408d27a0384158334e9ed40c9ceec930ac067dea7f3c2	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_06/section_06_02/logistic_1.stan	model	139	11	faf44b89a76927ee44464c6d9ae7b3d7b4573e42ff19707e1016036ab9e45a77	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_06/section_06_02/logistic_2.stan	model	237	14	442c7756e684203ff11679dc2c50b26a1cf8ed40e44045c8746c494f37e7c3d3	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_06/section_06_02/logistic_3.stan	model	254	15	ad50921af3c84a09268d96c985866edbdce0f137272861962f883842be6bf24e	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_06/section_06_02/rats.R	analysis/helper	4468	143	09e47fb518124e74668bff02e09d60eff2d451fafe0b9afe936b04ddd920c9f6	reviewed: prose/model/diagnostic sequence
+misc/chapter_06/section_06_02/rats.txt	navigation/documentation	62	5	f3f7a7f4e028565bde403ae1ed6c2f19f8e58255f79632d0021abd31604eb9d5	reviewed: navigation, prose, references or example documentation
+misc/chapter_06/section_06_03/measurement_error.R	analysis/helper	463	27	c862a268cbc50054daa503faa74ac76b4533d0101d2f00a77ff515b349c860b2	reviewed: prose/model/diagnostic sequence
+misc/chapter_06/section_06_04/intro_causal.R	analysis/helper	5685	163	fe9b5d0dd5b1fd7a93de1e6a1d3a54da08b5ef5ba8a68d06f04a433d0e21182c	reviewed: prose/model/diagnostic sequence
+misc/chapter_07/section_07_01/avg_pred_effect.R	analysis/helper	1590	43	ec497e6d3a00618ccce6f8cd05945645440c0584dcb7182cf97ab06a1f9cc486	reviewed: prose/model/diagnostic sequence
+misc/chapter_07/section_07_02/causal_poststrat_stan.R	analysis/helper	4468	125	f9fe10bd70e8b94b9ea5192c26ec13f0f847cbfd03ed11bb30aad6e6e7d8438f	reviewed: prose/model/diagnostic sequence
+misc/chapter_07/section_07_02/mrp_demo.stan	model	547	23	ef4b53bcf86a74310664d9402c6588a5b502ffe16b1a8ba98a38a6973bc5cb76	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_07/section_07_02/mrp_demo_logit.stan	model	545	23	0965380f8cdee60dadeac73c7582edc9e08101429422b8c17985f20e75e4daa5	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_07/section_07_02/mrp_demo_quadratic.stan	model	576	23	33fb33374891fcbbb0d26012954ff6b52a9c76eb4318e8d2a61ec7cac26921b2	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_08/section_08_01/reverse_engineering.R	analysis/helper	9724	247	fe999cec07a5343b3f6bf8075ef731795a78ac55c8bd203b116553663fbf532b	reviewed: prose/model/diagnostic sequence
+misc/chapter_08/section_08_01/simmed-maps.json	data	14096111	1	db67d7b1711af5d3fb17c196b274b5448dc35321039619c04e0d270db3b27e8a	inspected: format/schema/use in analysis; not reproduced empirically
+misc/chapter_08/section_08_02/kilpis_ppc.R	analysis/helper	5430	140	becf3d65b1e7c5b136432427b57f894694d31925e4bebeaadc1773fbda0ceabb	reviewed: prose/model/diagnostic sequence
+misc/chapter_08/section_08_02/simple_ppc.R	analysis/helper	2538	85	a7cf736435fea751a8edc0b60113cc054136e78b4f411c32c9cfa929f6cff061	reviewed: prose/model/diagnostic sequence
+misc/chapter_08/section_08_04/arsenic_loo.R	analysis/helper	2758	84	5ba68498f0940b767a676da9d82b62fa86f1d6a0beb622eb23a6260d52ae0bce	reviewed: prose/model/diagnostic sequence
+misc/chapter_08/section_08_04/wells.csv	data	148344	3021	8309650e5da27ef921330b3c9bedc5f97074f0c98e02c6185f8ff7e32b2ecab0	inspected: format/schema/use in analysis; not reproduced empirically
+misc/chapter_08/section_08_05/README.md	navigation/documentation	206	1	030836ecdc112f4af65a3411be4fec9e5af64cd83318cce1103de32081e7a59f	reviewed: navigation, prose, references or example documentation
+misc/chapter_09/README.md	navigation/documentation	248	2	7d128f2c7bc00e9e5cbbc785645b262d10945b3d346d017f3af1cc43130d6b7f	reviewed: navigation, prose, references or example documentation
+misc/chapter_10/section_10_05/hot_hand.R	analysis/helper	1945	72	00f9d8a63ca52875b3aa4cbe7bfb3bab5aa9bfa19a844b9f74eb702eed03c83e	reviewed: prose/model/diagnostic sequence
+misc/chapter_10/section_10_05/sexratio.R	analysis/helper	3172	88	16e4608e98d6c469d5a52993486fee95e3572d3678980781042fea00efcc8837	reviewed: prose/model/diagnostic sequence
+misc/chapter_10/section_10_05/sexratio_linear_0.stan	model	151	12	bf317da9ec0201b07a7b2349674d5f68ac5b793ed7417da02533423cf83bdc52	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_10/section_10_05/sexratio_linear_prior.stan	model	266	16	a9982e289997c70975ec9f6c6522e33eefd6ce3ec4497fd2001b083d69d07de2	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_11/section_11_01/typical_set.R	analysis/helper	1372	43	7add72e2ea5fee3646ded8e1cfd755f5324e0bb46bebe6d770d8cec05577a93a	reviewed: prose/model/diagnostic sequence
+misc/chapter_12/section_12_02/inits_for_optimization.R	analysis/helper	2443	73	7742d74e78b389d03d1b37c25784cca2f3307928804b4233341b481d7a29be3a	reviewed: prose/model/diagnostic sequence
+misc/chapter_12/section_12_02/logit_0.stan	model	136	11	7842464271bd93b85b75a0e5c18f76908e0a549e9ff71f97f1346c197b5bd8b2	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_12/section_12_04/hudson-bay-lynx-hare.csv	data	470	24	66d3b24d30221a5654ab48cc461ea1d3f725f8f5719016f702cfb56610b4ee63	inspected: format/schema/use in analysis; not reproduced empirically
+misc/chapter_12/section_12_04/lotka-volterra.stan	model	1588	52	149d5b51b6d83bf83530ed14be4d20399576ab35df7f05210112c0caa1d83a1a	reviewed: declarations, prior, likelihood, generated quantities
+misc/chapter_12/section_12_04/underdetermined.R	analysis/helper	4392	138	58a7bcd103ce9df12b76c94b17ace61a28b621f091810301d6f136a1101395c6	reviewed: prose/model/diagnostic sequence
+misc/chapter_14/section_14_01/sbc_workflow.R	analysis/helper	1909	75	5003736f19bff62c2427136cf423caaab19163b0224bd2025f433d186ff060cd	reviewed: prose/model/diagnostic sequence
+movies/movies.R	analysis/helper	16752	455	824ead9ae8c6c70da011ce1de5e35a78ed8c43db1af069358a993e1ee5d35dd5	reviewed: prose/model/diagnostic sequence
+movies/ratings_1.stan	model	376	22	6ce3743798887d1ce79d53e25b08fa1a789fd3cd4de7edbee9cc34c5671d9157	reviewed: declarations, prior, likelihood, generated quantities
+movies/ratings_2.stan	model	258	15	7424c1c829d34e63bf3aacf537398d68c821f24f68fbf7d6d4c1cac09d3dfc45	reviewed: declarations, prior, likelihood, generated quantities
+movies/ratings_3.stan	model	547	28	844772a8546e5ea64da3b418b8520d24fd2ab010d868bbb76ad0c564f2537a70	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/data/final_exam_answers.csv	data	233	2	4c8009f43dfb9142d33c5cf8bfe29f665b220a62f74920402cd1bf6ed82a3982	inspected: format/schema/use in analysis; not reproduced empirically
+multiple_choice/data/final_exam_responses.csv	data	3240	33	b24ffbd302486f020ffcae1a1c61f99c960c2d6a4a038ef50820a828fa1ba7f3	inspected: format/schema/use in analysis; not reproduced empirically
+multiple_choice/irt_guessing.stan	model	811	24	6b0f8ee3431dea66a330f5ead7920047e61295603450be9a4552deb2240e4315	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/irt_guessing_discrimination.stan	model	994	27	14a6fc024a3c6c69445f8a47fd514ef0dea88d79017d597a9fbfc5d10517e9a6	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_0.stan	model	150	11	61e4190122da16d9eeab1dc2dd582eb1ac89ca9c67f52f552f737df9b89a2f24	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_guessing.stan	model	333	18	c9cc1d59691467fb76504a53873ea2f018c94cc7107b3292fd660d9084aecf55	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_guessing_multilevel.stan	model	892	29	cd7684428cb1525ca8d1c80cd0f52ba27a5b7381a25f4af5e0eb34fd46adcd60	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_guessing_multilevel_bivariate.stan	model	946	35	0bb540158f44ba128ae7598beee4f5553d5495e19505ff9cc8e1446102a13255	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_guessing_multilevel_bivariate_cholesky.stan	model	1058	38	c0fd8bc7b8090eeb95b3a3bd105bf0d65715e93769bd749679ff4157cfe2b651	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_guessing_uncentered.stan	model	267	15	f4ab2e5401690f5309506c9418e02e31407d81f7c3ec5f781b9facbc86bf762f	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_guessing_uncentered_multilevel.stan	model	823	26	478c655d0e8368cd965470389e9366a464b34cd7f5982099190ca78fb5507bbd	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/logit_prior.stan	model	334	18	8188714eb2200fe599d791befda762b23d7f9378fd86cd95c76fdc4f83ea9164	reviewed: declarations, prior, likelihood, generated quantities
+multiple_choice/multiple_choice.R	analysis/helper	15733	584	16e3d98f2a5da5b4118fb08f9b94b2a46e002e54fde7d3cb19fbf5b9f7eb6d06	reviewed: prose/model/diagnostic sequence
+multiple_choice/plot_functions.R	analysis/helper	16763	392	3c538f018339a86a69530ce4a078e0af4a467c1bf563be7d290cfc281cde3b28	reviewed: prose/model/diagnostic sequence
+nabiximols/nabiximols.R	analysis/helper	53893	1140	408045ac53b6e8544ffdaa9b794de87f83b8da631cedf7cdc3d05c41eeed4481	reviewed: prose/model/diagnostic sequence
+other_code.qmd	navigation/documentation	1615	36	c324a52bbf8119d8a97ed3e5938a13c29c51bef053fd0f50058bdfd8398016a8	reviewed: navigation, prose, references or example documentation
+park_rule/data/park.csv	data	810904	51954	5fe4986d9880c2f8e78ade2bf1236d2894fc8b09357e12394d97c56e07f21b8e	inspected: format/schema/use in analysis; not reproduced empirically
+park_rule/data/park.txt	data	2469	27	9a121ad859d0280b2c564a259022f80c7d75046284380e9b3cb95509f744e003	inspected: format/schema/use in analysis; not reproduced empirically
+park_rule/park_1.stan	model	595	21	05bbfb463fe2d7494b5937285809b37d239b6e3d6587973b64f52a42e2bc220c	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_1_normal.stan	model	515	18	4c2c4977e6a06a769fdac1a3d17f2fb644a06cc1b839344cf3badf7694c7eec4	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_2.stan	model	672	25	d9cc0984e6770da649edadcd63773701bfaa0beb8c8e72cc711f7e914098338f	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_2_normal.stan	model	443	18	30790bb32dd74a95ab1fc48140cda12272dcf221e3468b75bdce69a0fb85aacb	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_3.stan	model	567	21	c29ef6955737a1a05bc6aec7149ecfb47c654d568ce1991ad2e6e399ed5437df	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_3_normal.stan	model	467	18	7a061abece69f8e8660e35be749c757a1c2a2b5a8ba2de383884d5d9508eb687	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_4.stan	model	671	27	f19e0034e55e04c3f3d28a22191c44a57f2fa8aa04f79b7f31d5e90f4ecbd0a4	reviewed: declarations, prior, likelihood, generated quantities
+park_rule/park_rule.R	analysis/helper	22362	610	7bafc722502fd10ba69136a242bd0d5092d62065dd22681241ba111cba761054	reviewed: prose/model/diagnostic sequence
+planetary_motion/planetary_motion.R	analysis/helper	34070	845	340f3fe0189838e76725b5e11dcdabf830ded653adb160a5d99f747e66a882f1	reviewed: prose/model/diagnostic sequence
+planetary_motion/planetary_motion.stan	model	1217	60	64c3c704635861fe95436214fbb1fd988cd3593f6eac1024ed647bc40a421b66	reviewed: declarations, prior, likelihood, generated quantities
+planetary_motion/planetary_motion_sim.stan	model	1188	54	9c3e84e37da21ce29faa6086eeb5e4cd3c500721aefa4e041eb3c4bae8b3eb80	reviewed: declarations, prior, likelihood, generated quantities
+planetary_motion/planetary_motion_star.stan	model	1415	64	dfaf81eb3091c2752867a75d42266e22e685ba89082329b656587e2de072702b	reviewed: declarations, prior, likelihood, generated quantities
+planetary_motion/references.bib	navigation/documentation	2991	67	f28f7de244c5e4db34f026f46fa3cc7776c81e05d5a2d05fa5d7e166cb64516d	reviewed: navigation, prose, references or example documentation
+planetary_motion/saved_fit/fit1.RDS	data	11995323	81909	7b9a040f26f22cb4bbfeef38d7a4c2bc6e908ad72a17cf371f8e16c5c8fa04bf	inspected: format/schema/use in analysis; not reproduced empirically
+planetary_motion/tools.R	analysis/helper	2386	94	4a2000c5948ef649627e7c470dc06078fd3fd79092dd0facfb199840fd0d84d6	reviewed: prose/model/diagnostic sequence
+problems/data/kilpisjarvi-summer-temp.csv	data	1392	63	8aaccc75a31a630954bf04ca8def2145226703d59675ebf9ef9142f96889f355	inspected: format/schema/use in analysis; not reproduced empirically
+problems/data/readme.txt	data	500	11	c72d1a38b8c5bba91d239f26ee5285898f0b624cc34deb400d0b25ec220177fe	inspected: format/schema/use in analysis; not reproduced empirically
+problems/hier_cp.stan	model	808	19	3b640e9db0502f5e6dded2716df74cd491ecd23b3465d8a74603076bc54912de	reviewed: declarations, prior, likelihood, generated quantities
+problems/hier_ncp.stan	model	861	22	a9a75c626437aa26ac7ef8231874ddbbe4a71804c7c4233f58c0c7cd7e2d110a	reviewed: declarations, prior, likelihood, generated quantities
+problems/linear_glm.stan	model	319	18	e3fa9344e165ff6c515561c87e5db4d3a8ca6d09d00bcb167b94d07bbdb7c178	reviewed: declarations, prior, likelihood, generated quantities
+problems/linear_glm2.stan	model	295	18	67902d849c67b4383485d3ef0f5b482c2357b053162f6b7f18d5953f2934fc23	reviewed: declarations, prior, likelihood, generated quantities
+problems/linear_glm_kilpis.stan	model	299	18	9a38a547d991698adc822c7c62246e2adadf45d002202f99cf60e582b43f2cd2	reviewed: declarations, prior, likelihood, generated quantities
+problems/logit_glm.stan	model	220	14	d221c9e2e60ca8ea4c695a9cbcc30b6e29253e5ce1908bef1142a64ef44e84c5	reviewed: declarations, prior, likelihood, generated quantities
+problems/logit_glm2.stan	model	267	16	ed9fd1b03af754027e6f61affa0760128670b8f0033ed5c8380570df62e2c8e5	reviewed: declarations, prior, likelihood, generated quantities
+problems/logit_glm3.stan	model	318	17	272a97793000587be69a3d9c6776f73ae87270fbc0be9141a537d0826c306482	reviewed: declarations, prior, likelihood, generated quantities
+problems/logit_glm4.stan	model	269	16	b9d861311a131fb37aad91b127e36377a0ae4e38046581197ff34a7e413299a1	reviewed: declarations, prior, likelihood, generated quantities
+problems/pois_glm.stan	model	254	16	a464ad5b81e04a4cb2b6d76abb6af1f26fd1c21bfa40a22b7485dfca5467bbd2	reviewed: declarations, prior, likelihood, generated quantities
+problems/problems.R	analysis/helper	36152	980	b6d4b1984566925e1348e43eefcd5d16790f88541df2ce1b838f4d4b76e064bd	reviewed: prose/model/diagnostic sequence
+problems/student.stan	model	159	12	b6c850a252fb953c70f93f1d40bf45242fbaa925072d8a5bdefe77709b563f70	reviewed: declarations, prior, likelihood, generated quantities
+resources.qmd	navigation/documentation	4420	67	59af4158d6568358374bf036e03ec7a63680b6d7c8ce461b5bdf66131efaf0a9	reviewed: navigation, prose, references or example documentation
+roaches/poisson_vi_integrate.stan	model	2462	62	0e63130d1d3af39c440856101593ab0923fc078d7834ff3a0adef888470fa2f1	reviewed: declarations, prior, likelihood, generated quantities
+roaches/roaches.R	analysis/helper	40199	987	caa573022f12a9b97f0b54389ffd29f47f0a36db877c993a4ba6f23d6a8705da	reviewed: prose/model/diagnostic sequence
+sbc/models/.gitignore	presentation/build	17	4	0e27898ce3bb3e386dfacadb53e05f933092507597832704f1602d7edb70ad70	inventoried: image/style/build artifact; no modeling rule extracted
+sbc/models/combined_first.stan	model	529	21	7475b8d81d3c1dd09e2882b71d382500f195dd0f39a4213d8fe74fe1466251a3	reviewed: declarations, prior, likelihood, generated quantities
+sbc/models/logistic_first.stan	model	326	15	493f442e9415c1f61fcafaaf667063e6ebf63b6cfd79fddb44b707e3732f37cc	reviewed: declarations, prior, likelihood, generated quantities
+sbc/models/logistic_fixed_prior.stan	model	330	14	b4678fd3462fffbfb5572451bf647524fc3625dafd4e2da2c9fe197918f6eb95	reviewed: declarations, prior, likelihood, generated quantities
+sbc/models/logistic_merged_intercept.stan	model	314	14	ed20851ca3fdb98c1154315be78a16ff075a1bc0f0a85a7ccf86062d639fbb2f	reviewed: declarations, prior, likelihood, generated quantities
+sbc/models/mixture_first.stan	model	283	15	fa7165c6c5b5129825578895b5ba60be314c3a644e04b10d73b7877499dab363	reviewed: declarations, prior, likelihood, generated quantities
+sbc/models/mixture_fixed_log_mix.stan	model	357	19	9ac6fce730170fb569aa1ba25dcba702882ff958c47d1ad71f5e0b0af3e9965b	reviewed: declarations, prior, likelihood, generated quantities
+sbc/models/mixture_fixed_ordered.stan	model	316	17	71fb87426464c8fef9709ee3b72718173acd931b036f1cdfea70459f88a43c1f	reviewed: declarations, prior, likelihood, generated quantities
+sbc/sbc.R	analysis/helper	44668	975	fda4c1c3f5a488bb9e1264401f9b7565bcaae37de7d9f98360fd93429e257331	reviewed: prose/model/diagnostic sequence
+sharks/data/readme.txt	data	49	2	ae17f7b50679fe3762fdb66c4f11fd62c579ca92584a571bdeed69c66b9adbb5	inspected: format/schema/use in analysis; not reproduced empirically
+sharks/data/whiteshark_trackdata.RData	data	1906416	13795	ae489516b6d5a7b6a74b7c358c7d68e1b2a302a8d1cdc6e446ea9bf3d7f8f486	inspected: format/schema/use in analysis; not reproduced empirically
+sharks/sharks.R	analysis/helper	28601	703	9f8fad1ab50552443942430a261440f047ef2507e4b3d8012e91d8baac0b7d7e	reviewed: prose/model/diagnostic sequence
+sharks/step_turn_hmm.stan	model	7862	247	c7454ebe01b6f178dc87479a0995c94d03ab8d6235f424b0137b8f35e99f1d10	reviewed: declarations, prior, likelihood, generated quantities
+sharks/step_turn_hmm_covariates.stan	model	3787	140	05d8c969a02ff7e25c2ea29aeefb1dffffa4009a53ecd88c060dcb6a87cf66c0	reviewed: declarations, prior, likelihood, generated quantities
+sharks/step_turn_hmm_covariates_cre_ncp.stan	model	4550	155	9f12373aaf89544b3fc2d42b6ff06a0e20f8271ae4ceed2fddae6240cb66f56f	reviewed: declarations, prior, likelihood, generated quantities
+sleep_study/shrinkage_plots_gaussian.R	analysis/helper	2709	90	2909ea548dccd53d512e1170aaa7dd3e22798d4c98742edab0cf73987f74b890	reviewed: prose/model/diagnostic sequence
+sleep_study/shrinkage_plots_lognormal.R	analysis/helper	2784	92	d58d96d629a8eb756ff64e86c782242f9551f5ca31ba8a84a89887c433b45ff4	reviewed: prose/model/diagnostic sequence
+sleep_study/sleep_study.R	analysis/helper	26276	863	f2f507bf69e6da66021a1396f615a760011ebc05e0265fe18450d335fcf5a7a5	reviewed: prose/model/diagnostic sequence
+social-card.png	presentation/build	232564	1764	4d28489192667bc62292c08ea0db9a91ca85c604367cb380a10c61f457bdb68e	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/bioassay.png	presentation/build	253940	1927	301eb3eb7854b8c5805d8403db73658dc6823775ed2dd3fc3ad8dee92c689323	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/birthdays.png	presentation/build	411695	2901	eb5a9e9eef151a1b421599cad34fefaef3b33a1a5de36369ee3c6d0c93a69d71	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/build_all.sh	presentation/build	414	11	34e372677f624ba662b0c17672d89f1d7f00b2ba91f0df7d16eb909f5bf5633e	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/cards.tsv	presentation/build	525	27	e4d0aa3fbe264ffa276dee766fa99fd5c514a0588319b5f6d1801317365b953b	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/cat_adoptions.png	presentation/build	223368	1623	ca21ce12f110380add37c0cdcef813ad2cf70dffabe49a551962d03b2db40cdf	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/coronavirus.png	presentation/build	318430	2370	9b5fe49f1f2a6902affb01254d032fb13594c0527a643dc0a5c36502e7e434c9	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/declining_exponentials.png	presentation/build	229823	1568	bcfec3477b6a7dd85aa918ba3d8023c302a191f98a35aa0a6ddb84aeef982e00	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/digits.png	presentation/build	187089	1376	5dccbe7a2de869475266c23aaabbd0fdab374ff05197ba234d3e447c918b82ef	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/dogs.png	presentation/build	281837	2158	391a1ab7ee6bd651d35b60dd7b65f026fa19969e9528813ff185dab649f2947e	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/dogs_stan.png	presentation/build	391651	2881	39fe9775d5482b4fed622c30aed2259a62b4875f32a95c40342beef49dda7258	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/golf.png	presentation/build	178595	1248	1dd43077a611ec42bee51c7986f5ea638f23377497a201bcaade19d2caabeb3a	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/loo_comparison.png	presentation/build	195981	1331	83609351b367fe2211274694d0cee1cb8f6471c4f4dfbe77e97451ac0dd0130a	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/make_card.sh	presentation/build	3104	72	61e47e8d7d0631d9cd55e04de0e54917c28537b929d381b4c0d05ffe0ae81083	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/movies.png	presentation/build	217651	1581	0691fe9fe148d4330d51e58b2424855917fdd1cad45ba5a6e707ee6af5ac3579	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/multiple_choice.png	presentation/build	365922	3043	4029d12fb354803f76ca666c6bc3296b3884da9d769d6cacfd19b4e9954bf55d	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/nabiximols.png	presentation/build	183955	1208	447c5019b8255479dfe591ffbcf6a4d43e58757f1331e84d23fc76294600c523	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/park_rule.png	presentation/build	237253	1622	ee9787652d1c506c568ccae67d47d5384fe2357ec39375fadb36b44c42939aff	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/planetary_motion.png	presentation/build	246019	1602	30122d8bd4b9d893054a8d0a681cb1e75a6eedece0668f0c43d5103d20af185d	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/problems.png	presentation/build	239379	1609	c9a2b3fe5e63c11f2fc47e7d16875e290adc87b93a26af725de41fcaacbc0ce4	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/roaches.png	presentation/build	206434	1344	c6678148c56f35dba88e48061033bde5b88d050ec1039fc7f7f843a4c182dac6	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/sbc.png	presentation/build	200036	1462	f27464e45351f4b219baddd8fe3eb73daa7b6df979f0e21e0ac22da864c1efef	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/sharks.png	presentation/build	215769	1606	504d4a6f5f128b9476c1ca4e5124c3974a07c8cb87d7c6cc4ecb4f372ddbc7bd	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/sleep_study.png	presentation/build	251026	1857	ba1cc8ad0ec8e6cd3790ef965103830f90e26827839840e7de01fe6f7b4b3371	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/timeseries.png	presentation/build	335006	2251	e82fcf0d1bc73ada016f782d5f0672987ad32e01e6f9aeee5c506fb8829cf09f	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/variable_selection.png	presentation/build	205594	1314	f00d96d8d0842de5b41f72b1899c08049dcaf1357059694135b8528a67811e70	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/wire_images.py	presentation/build	1315	32	2ccf036c553e1e956a6d71cd46d82ee25670ea0445c984235bc518405e5b71a1	inventoried: image/style/build artifact; no modeling rule extracted
+social-cards/world_cup.png	presentation/build	251827	1709	d0aac8e74aac8f6e5ee8e2c8476b2b5ecaf5de264f268af4a87c410f9ed12077	inventoried: image/style/build artifact; no modeling rule extracted
+timeseries/data/Series1000.txt	data	769725	2000	2cf5d86f5c7184665c020f36eddc1348738d30cc47617ffc295529377f7d5560	inspected: format/schema/use in analysis; not reproduced empirically
+timeseries/mixture.stan	model	327	20	1a4051bc6afea9045a5767f4f8dc54b9274044004974851d19d074016b97ef5b	reviewed: declarations, prior, likelihood, generated quantities
+timeseries/mixture_2.stan	model	576	33	c189b4560faf0f6653d7f301a5e209f33ffb94c926cc648af8e0625cf502d8c0	reviewed: declarations, prior, likelihood, generated quantities
+timeseries/timeseries.R	analysis/helper	12872	329	78fda4e77f7f38b31320e623a7d6c386663d3e0a27c52dc58900f89f5d10eea2	reviewed: prose/model/diagnostic sequence
+timeseries/timeseries.Rmd	analysis/helper	11144	302	f9b2066c2c797afdf0ca71b36e6825bd437e3b3765fa68f95db4e8dce4242ac8	reviewed: prose/model/diagnostic sequence
+variable_selection/data/readme.txt	data	1512	28	bd52d33a39ba31a67b65d647580f3bd7a52d870ff3e5277cab8cbc0527a5f4c8	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student-mat.csv	data	56993	396	e47f9ee225e1ee6e69b7564e6dac7123e80b8486677fe111f351964cef5dec80	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student-merge.R	analysis/helper	278	5	9e4cd7cae02f88f536311bfe930cd7e4c0b0a1bd1a2386be10ade48456e2f1e0	reviewed: prose/model/diagnostic sequence
+variable_selection/data/student-merged-all.csv	data	48340	683	44691ca0f21ffaaa9283b83e69a69863c540c5da14cf41b6cc060a1d80a10d7d	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student-merged.csv	data	48340	683	44691ca0f21ffaaa9283b83e69a69863c540c5da14cf41b6cc060a1d80a10d7d	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student-por-numeric.csv	data	40175	650	ba620688ad0cf3e38f0b0904d55a15b6545fed2a1f0aaff55e5eebc7fcfa8384	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student-por.csv	data	93220	650	a7594a11d7771c0efe1a740824e0e833da9c4cad07c39a9766a874575563fb3f	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student.txt	data	3206	40	f8d3e734e237071312790ca667330c66d75e706317f8d5e2125c479d70e962c1	inspected: format/schema/use in analysis; not reproduced empirically
+variable_selection/data/student_setup.R	analysis/helper	3951	53	c022a8a1ee9b3d67378d0c4eec951fcd8a8de39ab502ed0f52b2d1380e524e46	reviewed: prose/model/diagnostic sequence
+variable_selection/variable_selection.R	analysis/helper	34111	820	6ec81833facde6aa06193f973bc103f2a07460cc78980dc1a4cafd61f46fcb87	reviewed: prose/model/diagnostic sequence
+world_cup/data/soccerpowerindex.csv	data	361	33	5f0e6328bc45a0f0f8a7b2366141ae9e1c965a0ae1eb47b239c124b4eae520a2	inspected: format/schema/use in analysis; not reproduced empirically
+world_cup/data/worldcup2014.csv	data	1347	65	a5b8ab7dabf7c045e2ec44b076c35588ae8e9eec26bbdc8f89255dc3b9e924a2	inspected: format/schema/use in analysis; not reproduced empirically
+world_cup/world_cup.R	analysis/helper	19777	574	f41ff61eb9389dde6c24f22d31c350419c6cfcd177f6b01b2d006854b0c7a768	reviewed: prose/model/diagnostic sequence
+world_cup/worldcup_bivariate_poisson.stan	model	3677	97	d62f80fb6056cf88416698017670985f56ad5c96302af32374a813de980c9728	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_continuous.stan	model	1142	37	883c8eb94dfde23c88c5292d2943c4f6613df74b388df39f63d46fe270030d51	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_continuous_midpoint_ll.stan	model	832	36	dbf81bf0ff7ed82c10895750b3a0e338a905c58684c5cb6cd34cb5a24b2b4daf	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_discrete.stan	model	1135	41	98f291f4e1676029a14659f8d473ef598f3603632a4296db654d4cf593a66c3d	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_discrete_nopower.stan	model	1074	40	8863a91cf6adaf75e79569c49ea97ace44d8fdf8bc47b5e00308b5f3812839a3	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_discrete_pooled.stan	model	842	34	322f18c5ca24f2a32b1a15133883a10ee8021bb61823eecb27e72d5d9984b46e	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_discrete_poweronly.stan	model	1054	39	b704bb4607a08d09e4d1cbcaeb9797e6deb37f4fd73e1b4c9122c3682312d411	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_discrete_z.stan	model	1031	40	3718b1e231d79ab874b12a34661b8add097b4814083d1d71732ee7fc2352d828	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_first_try.stan	model	792	35	5cc0dfcb6862894045a96ad305f59e6c38e9684dd490d3079d6e43e2cdc823aa	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_fixed.stan	model	1052	43	40cb5af53cce5ef93fb578ffd2e0e81a1328954c69f5069c477692aed91a6005	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_no_prior.stan	model	961	38	fa24051880e1c084577ce52d6b813379bc5777e4058789e7ddc9552391440525	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_no_sqrt.stan	model	753	35	705fe4a22694f40d7714192d77c051d2761fe5a2a01d2d9296d546f49e7c4265	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_poisson_difference.stan	model	1573	48	71ab7018ae18a29ccff5b2288434399dd21a164d0df58da5e4564fbae4b5c18e	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_sqrt_continuous.stan	model	2539	80	c30770e7d2e5be1965fc53cc22e4aa3ee28ee6bcd3d5db3e72ba93f55b8bba98	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_sqrt_continuous_nojacobian.stan	model	1309	50	cbe6ae237562181a026d9efa6b440441d8e605d036448a58f6e265aa2d6e3798	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_sqrt_discrete.stan	model	3786	107	9907183d3ee02695cabeb06bcf5825b44111d38ca7dd21516c19cc33b055388b	reviewed: declarations, prior, likelihood, generated quantities
+world_cup/worldcup_with_replication.stan	model	1027	43	912aa1a11bc978d4219e68c4b05c5eab706355fa3479b7b0aa4006fd14ebbd9e	reviewed: declarations, prior, likelihood, generated quantities

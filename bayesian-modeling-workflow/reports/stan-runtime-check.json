@@ -1,0 +1,91 @@
+{
+  "model": "code/stan_patterns/gaussian_regression.stan",
+  "sha256": "f85403399069dab28b15b6c3f190e34ba5ba0c29ab48b335e647440b4c246353",
+  "Stan": "2.39.0 (httpstan 4.17.0 headers/services)",
+  "execution": "Direct native Stan services; four CPU/file-only chains",
+  "seed": 20261004,
+  "N": 80,
+  "truth": {
+    "alpha": 0.5,
+    "beta": 0.7,
+    "sigma": 0.4
+  },
+  "warmup_per_chain": 400,
+  "draws_per_chain": 500,
+  "total_retained": 2000,
+  "adapt_delta": 0.8,
+  "max_depth": 10,
+  "post_warmup_divergences": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "post_warmup_max_depth_hits": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "bfmi": [
+    1.0781895739577398,
+    1.1966664924701835,
+    1.0242958461040719,
+    0.9322400833498693
+  ],
+  "basic_split_rhat_scope": "Classical split diagnostic only; no claim this replaces rank-normalized/folded Rhat or ESS/MCSE in scientific fits",
+  "parameter_checks": {
+    "alpha": {
+      "truth": 0.5,
+      "median": 0.5210715361309795,
+      "interval_98": [
+        0.41615367282803317,
+        0.6263798453275519
+      ],
+      "basic_split_rhat": 0.9995078820388523
+    },
+    "beta.1": {
+      "truth": 0.7,
+      "median": 0.7156861556229968,
+      "interval_98": [
+        0.5391890140997376,
+        0.8896829520463404
+      ],
+      "basic_split_rhat": 1.001569292030067
+    },
+    "sigma": {
+      "truth": 0.4,
+      "median": 0.387796692520898,
+      "interval_98": [
+        0.3252640044203169,
+        0.47706997879399016
+      ],
+      "basic_split_rhat": 0.9990322108712042
+    }
+  },
+  "generated_quantity_checks": [
+    {
+      "mu_max_error": 6.661338147750939e-16,
+      "log_lik_max_error": 2.6645352591003757e-15
+    },
+    {
+      "mu_max_error": 6.661338147750939e-16,
+      "log_lik_max_error": 2.220446049250313e-15
+    },
+    {
+      "mu_max_error": 8.881784197001252e-16,
+      "log_lik_max_error": 3.552713678800501e-15
+    },
+    {
+      "mu_max_error": 6.661338147750939e-16,
+      "log_lik_max_error": 3.1086244689504383e-15
+    }
+  ],
+  "all_output_finite": true,
+  "warnings": "Two scale-underflow proposal rejections during adaptation; no post-warmup divergence/depth warnings. They were not hidden by changing support or priors.",
+  "scope": "Representative smoke fit, not repeated coverage, full SBC, full R API integration or a fit of official case data.",
+  "fixture": "tests/fixtures/gaussian-data.json",
+  "fixture_sha256": "63bfadd4bf07d5344df0306a2743b4687bead3dcce03db92f06e5ee17d66a1f8",
+  "data_rng": "NumPy 2.3.5 default_rng(20261004) (PCG64), fixed linspace(-1,1,80); supplied JSON is authoritative for replay",
+  "warning_phase_verification": "Both scale-underflow messages followed the first Warmup marker and preceded the warmup-400 marker. No numerical-rejection message occurred during marked Sampling phases."
+}

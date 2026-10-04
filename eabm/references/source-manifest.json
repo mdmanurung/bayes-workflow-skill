@@ -1,0 +1,211 @@
+{
+  "retrieved_on": "2026-10-04",
+  "repository": "https://github.com/arviz-devs/EABM",
+  "commit": "d96c4c09ec1dc67c14ede90d5b9f491418f4d35e",
+  "sources": [
+    {
+      "path": "Chapters/Bayesian_workflow.qmd",
+      "bytes": 15285,
+      "sha256": "08bd9dd9857c880e71ad5d6d4c32915744af3d4143aea8c18ce5375800e899b3",
+      "python_blocks": 0
+    },
+    {
+      "path": "Chapters/Case_study_model_comparison.qmd",
+      "bytes": 15314,
+      "sha256": "35910d3e9929ab01b097e223e22e88118a29a5950c7e545cb2dbef594be41241",
+      "python_blocks": 13
+    },
+    {
+      "path": "Chapters/DataTree.qmd",
+      "bytes": 15624,
+      "sha256": "34303718a965ecbbe43cc9e419d86a0dd3d2ba72b2d7054f397d6aae9d806e7e",
+      "python_blocks": 33
+    },
+    {
+      "path": "Chapters/Distributions.qmd",
+      "bytes": 26680,
+      "sha256": "1fbb8f60c02e528c11f21211b6133a3d7194424a6d3849aacc43e52464802d9e",
+      "python_blocks": 27
+    },
+    {
+      "path": "Chapters/Elements_of_visualization.qmd",
+      "bytes": 17709,
+      "sha256": "29bb86900392897c9bf9087f11bcbc0506b3108f45a75dc41bf3d70abb0d5c28",
+      "python_blocks": 6
+    },
+    {
+      "path": "Chapters/MCMC_diagnostics.qmd",
+      "bytes": 30245,
+      "sha256": "92b02ba94e9d50f56338e43a8e25822d3d3026b0e3a450554d02da803fc6cd41",
+      "python_blocks": 25
+    },
+    {
+      "path": "Chapters/Model_comparison.qmd",
+      "bytes": 82535,
+      "sha256": "d4a810eeb37148f113f676213167c135b6fb0e9232bd595f57b9f69157479651",
+      "python_blocks": 17
+    },
+    {
+      "path": "Chapters/Model_comparison_large_data.qmd",
+      "bytes": 22592,
+      "sha256": "549e16fb0535b0d0c6b98391b584bd46baf2831ce2eb61ee8ba8d5fe10130670",
+      "python_blocks": 26
+    },
+    {
+      "path": "Chapters/Moment_Matching.qmd",
+      "bytes": 16241,
+      "sha256": "81fbe5b131b2a6a062260c91400819b11517f17e753d29ff146db150dd5f510d",
+      "python_blocks": 12
+    },
+    {
+      "path": "Chapters/Presenting_results.qmd",
+      "bytes": 6580,
+      "sha256": "256ca2a6f7a9297577defaa0638f8d41226aead3522176e468dd549eeb92af06",
+      "python_blocks": 0
+    },
+    {
+      "path": "Chapters/Prior_elicitation.qmd",
+      "bytes": 34080,
+      "sha256": "b249b50c06482d56d3bf83e5d6806508e15964b7a619820656652020d789ed6b",
+      "python_blocks": 18
+    },
+    {
+      "path": "Chapters/Prior_posterior_predictive_checks.qmd",
+      "bytes": 43748,
+      "sha256": "c58f677f04e7815acd5dd343a752fb012d8ff28ff87d46f357737655a9e197d6",
+      "python_blocks": 25
+    },
+    {
+      "path": "Chapters/References.qmd",
+      "bytes": 44,
+      "sha256": "716ef649ca7fb29cac3cba133f157c33c0049cff6ac9c2eaf922886e45c7c077",
+      "python_blocks": 0
+    },
+    {
+      "path": "Chapters/Sensitivity_checks.qmd",
+      "bytes": 29155,
+      "sha256": "21036b55125f7d86dbd3e2924b310ca131bfb1ef3d7a8879ef286ed449bc2f38",
+      "python_blocks": 21
+    },
+    {
+      "path": "Chapters/Simulation_based_calibration.qmd",
+      "bytes": 13431,
+      "sha256": "190be42f89f7778adb5e0659a89b6e5be99a160cddca2127e8565e903cae3484",
+      "python_blocks": 4
+    },
+    {
+      "path": "Chapters/Variable_selection.qmd",
+      "bytes": 17218,
+      "sha256": "4caab37c155883c5bc8e03f48f72de46908e91942320cde23c00369cf73863b1",
+      "python_blocks": 17
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 17689,
+      "sha256": "176fdd712458a69435102791f06cf14bc66f86089351415c9df9c3c263798631"
+    },
+    {
+      "path": "img/coodinates.ipynb",
+      "bytes": 305048,
+      "sha256": "4448653417bb6762f59c823be88b4207c65deaa20275a032f8d3807729860afc",
+      "cells": 5
+    },
+    {
+      "path": "index.qmd",
+      "bytes": 3397,
+      "sha256": "ebbd5b1e219d94993e722129bcc35253b9dddf0ba3530044b28c775bb975a213",
+      "python_blocks": 0
+    },
+    {
+      "path": "models/crabs/crabs.ipynb",
+      "bytes": 1189321,
+      "sha256": "1d045cad9ffe011a1d4eed7a71d3b3b9434a023d4ec27a38ba4e6c83fad9bbf4",
+      "cells": 14
+    },
+    {
+      "path": "models/discrete/categorical_and_ordinal.ipynb",
+      "bytes": 6068,
+      "sha256": "c0b52700ce8a20993dc6dbb419f56af372dcbfe1380c94d645a16f303c7fbf72",
+      "cells": 4
+    },
+    {
+      "path": "models/laliga/base_model.ipynb",
+      "bytes": 9197,
+      "sha256": "804485dee3403055433882d02ffe578580392687c3acbcfa23028c1bc31137a1",
+      "cells": 6
+    },
+    {
+      "path": "models/laliga/budget_model.ipynb",
+      "bytes": 10096,
+      "sha256": "832cc1e87c5f79effcf80942454e1b9774f688281e08216d476f9cc02682bcc3",
+      "cells": 7
+    },
+    {
+      "path": "models/laliga/data_cleanup.ipynb",
+      "bytes": 7391,
+      "sha256": "b259710482bf19b80ec2c29220b506aaabc7be4c400821deb08c256e01279d3b",
+      "cells": 4
+    },
+    {
+      "path": "models/laliga/nofield_model.ipynb",
+      "bytes": 9143,
+      "sha256": "000151d1f6a885ba7434152fef95531df664a1b7dbeea9b81d4e2b63c057a4b4",
+      "cells": 6
+    },
+    {
+      "path": "models/roaches/moment_matching.py",
+      "bytes": 853,
+      "sha256": "8fd5d71a096f2f0cce09263de0666214754a673af253634ac82c546488f0a069"
+    },
+    {
+      "path": "models/wells/model_comparison_large_data.py",
+      "bytes": 2823,
+      "sha256": "a0b7f770557b0138e956789b6ea29e72be67199b7cd601209349e719767aeea8"
+    },
+    {
+      "path": "paper/paper.bib",
+      "bytes": 5859,
+      "sha256": "ab04d3b70376e2e588bdbd6754fe9acc0208b1f200d6947a05c07616884d2bd5"
+    },
+    {
+      "path": "references.bib",
+      "bytes": 33390,
+      "sha256": "0dc7865a4361f028c0d94c497456ab0b63866a53dda6d2dd926e5fac93b1ccdf"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 122,
+      "sha256": "5aa26d16cd25e2516bfb64e9c9c1d9c68ed236c01bf35dfab2effcd1924d13a9"
+    },
+    {
+      "path": "scripts/bayes_theorem.py",
+      "bytes": 1437,
+      "sha256": "4b906fe8a2b014a8db342e998ce28c1bd1a64500e0b7d8919c7a4f5c96dbbc3f"
+    },
+    {
+      "path": "scripts/beta_binomial_ani.py",
+      "bytes": 1568,
+      "sha256": "ceb40b532426976770bf2cea0dade2d8c939271d5218c785bdd59f8f07960a99"
+    },
+    {
+      "path": "scripts/beta_bounds.py",
+      "bytes": 1367,
+      "sha256": "dd2005651f84777c3dc9f3897ab660f6df424ce31d51076970a033b9b62bf42e"
+    },
+    {
+      "path": "scripts/max_ent.py",
+      "bytes": 1095,
+      "sha256": "c1bcc39c9f0c844734bdcea228d3e8bfb0e60ed3aea961f6bcccfc9563ed97c1"
+    },
+    {
+      "path": "scripts/prior_posterior.py",
+      "bytes": 1057,
+      "sha256": "ccee08f589a97b128c9cc86254f25e93a0509a1f87dd461f7bd28e4a83b641d6"
+    },
+    {
+      "path": "scripts/prior_vagueness.py",
+      "bytes": 1084,
+      "sha256": "5ccb29afbd2141dd6ac65686dc7be3880b3d0a61fbc7411327535b8ea66776d0"
+    }
+  ]
+}

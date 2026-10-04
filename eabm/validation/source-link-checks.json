@@ -1,0 +1,430 @@
+{
+  "date": "2026-10-04",
+  "scope": "retrieval availability; not a statistical-source review",
+  "checks": [
+    {
+      "url": "https://arviz-devs.github.io/EABM/",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Bayesian_workflow.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Bayesian_workflow.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Case_study_model_comparison.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Case_study_model_comparison.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/DataTree.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/DataTree.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Distributions.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Distributions.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Elements_of_visualization.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Elements_of_visualization.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/MCMC_diagnostics.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/MCMC_diagnostics.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Model_comparison.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Model_comparison.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Model_comparison_large_data.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Model_comparison_large_data.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Moment_Matching.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Moment_Matching.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Presenting_results.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Presenting_results.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Prior_elicitation.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Prior_elicitation.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Prior_posterior_predictive_checks.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Prior_posterior_predictive_checks.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Sensitivity_checks.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Sensitivity_checks.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Simulation_based_calibration.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Simulation_based_calibration.html"
+    },
+    {
+      "url": "https://arviz-devs.github.io/EABM/Chapters/Variable_selection.html",
+      "status": 200,
+      "resolved_url": "https://arviz-devs.github.io/EABM/Chapters/Variable_selection.html"
+    },
+    {
+      "url": "https://arxiv.org/abs/1604.00695",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/abs/1604.00695"
+    },
+    {
+      "url": "https://arxiv.org/abs/1804.06788",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/abs/1804.06788"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.03279",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/abs/2502.03279"
+    },
+    {
+      "url": "https://bambinos.github.io/bambi/api/Model.html",
+      "status": 200,
+      "resolved_url": "https://bambinos.github.io/bambi/api/Model.html"
+    },
+    {
+      "url": "https://cran.r-project.org/web/packages/SHELF/SHELF.pdf",
+      "status": 200,
+      "resolved_url": "https://cran.r-project.org/web/packages/SHELF/SHELF.pdf"
+    },
+    {
+      "url": "https://doi.org/10.1007/s11222-016-9696-4",
+      "status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1007/s11222-016-9696-4?error=cookies_not_supported&code=5c7a4ead-98cf-47e1-8e20-69dbef5b447c"
+    },
+    {
+      "url": "https://doi.org/10.1007/s11222-020-09982-2",
+      "status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1007/s11222-020-09982-2?error=cookies_not_supported&code=6bceca23-5a9d-48bf-af57-0ffb7f978dad"
+    },
+    {
+      "url": "https://doi.org/10.1007/s11222-022-10090-6",
+      "status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1007/s11222-022-10090-6?error=cookies_not_supported&code=68ed0cba-6906-4e62-bde2-11629c86ad7c"
+    },
+    {
+      "url": "https://doi.org/10.1007/s11222-023-10366-5",
+      "status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1007/s11222-023-10366-5?error=cookies_not_supported&code=ed6a9347-7b56-42cd-92f2-d6f9b9c531b6"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01177-7",
+      "status": 200,
+      "resolved_url": "https://www.nature.com/articles/s41562-021-01177-7?error=cookies_not_supported&code=08785429-9852-485f-8e95-a644773a8c0e"
+    },
+    {
+      "url": "https://doi.org/10.1111/rssa.12378",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://doi.org/10.1214/17-BA1091",
+      "status": 200,
+      "resolved_url": "https://projecteuclid.org/journals/bayesian-analysis/volume-13/issue-3/Using-Stacking-to-Average-Bayesian-Predictive-Distributions-with-Discussion/10.1214/17-BA1091.full"
+    },
+    {
+      "url": "https://doi.org/10.1214/20-BA1221",
+      "status": 200,
+      "resolved_url": "https://projecteuclid.org/journals/bayesian-analysis/volume-16/issue-2/Rank-Normalization-Folding-and-Localization--An-Improved-R%cb%86-for/10.1214/20-BA1221.full"
+    },
+    {
+      "url": "https://doi.org/10.1214/20-EJS1711",
+      "status": 200,
+      "resolved_url": "https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-14/issue-1/Projective-inference-in-high-dimensional-problems--Prediction-and-feature/10.1214/20-EJS1711.full"
+    },
+    {
+      "url": "https://doi.org/10.1214/23-BA1404",
+      "status": 200,
+      "resolved_url": "https://projecteuclid.org/journals/bayesian-analysis/volume-20/issue-2/Simulation-Based-Calibration-Checking-for-Bayesian-Computation--The-Choice/10.1214/23-BA1404.full"
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.15127548",
+      "status": 200,
+      "resolved_url": "https://zenodo.org/records/18504455"
+    },
+    {
+      "url": "https://doi.org/10.54337/jovi.v1i1.11478",
+      "status": 200,
+      "resolved_url": "https://journals.aau.dk/index.php/jovi/article/view/11478"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Bayesian_workflow.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Bayesian_workflow.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Case_study_model_comparison.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Case_study_model_comparison.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/DataTree.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/DataTree.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Distributions.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Distributions.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Elements_of_visualization.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Elements_of_visualization.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/MCMC_diagnostics.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/MCMC_diagnostics.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Model_comparison.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Model_comparison.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Model_comparison_large_data.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Model_comparison_large_data.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Moment_Matching.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Moment_Matching.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Presenting_results.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Presenting_results.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Prior_elicitation.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Prior_elicitation.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Prior_posterior_predictive_checks.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Prior_posterior_predictive_checks.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Sensitivity_checks.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Sensitivity_checks.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Simulation_based_calibration.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Simulation_based_calibration.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Variable_selection.qmd",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/EABM/blob/d96c4c09ec1dc67c14ede90d5b9f491418f4d35e/Chapters/Variable_selection.qmd"
+    },
+    {
+      "url": "https://github.com/arviz-devs/simuk",
+      "status": 200,
+      "resolved_url": "https://github.com/arviz-devs/simuk"
+    },
+    {
+      "url": "https://github.com/bambinos/kulprit",
+      "status": 200,
+      "resolved_url": "https://github.com/bambinos/kulprit"
+    },
+    {
+      "url": "https://hyunjimoon.github.io/SBC/",
+      "status": 200,
+      "resolved_url": "https://hyunjimoon.github.io/SBC/"
+    },
+    {
+      "url": "https://hyunjimoon.github.io/SBC/reference/ECDF-plots.html",
+      "status": 200,
+      "resolved_url": "https://hyunjimoon.github.io/SBC/reference/ECDF-plots.html"
+    },
+    {
+      "url": "https://jmlr.org/papers/v25/19-556.html",
+      "status": 200,
+      "resolved_url": "https://jmlr.org/papers/v25/19-556.html"
+    },
+    {
+      "url": "https://mc-stan.org/bayesplot/reference/PPC-test-statistics.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/bayesplot/reference/PPC-test-statistics.html"
+    },
+    {
+      "url": "https://mc-stan.org/bayesplot/reference/index.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/bayesplot/reference/index.html"
+    },
+    {
+      "url": "https://mc-stan.org/cmdstanpy/api.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/cmdstanpy/api.html"
+    },
+    {
+      "url": "https://mc-stan.org/cmdstanr/reference/index.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/cmdstanr/reference/index.html"
+    },
+    {
+      "url": "https://mc-stan.org/docs/stan-users-guide/efficiency-tuning.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/docs/stan-users-guide/efficiency-tuning.html"
+    },
+    {
+      "url": "https://mc-stan.org/learn-stan/diagnostics-warnings.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/learn-stan/diagnostics-warnings.html"
+    },
+    {
+      "url": "https://mc-stan.org/loo/reference/loo.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/loo/reference/loo.html"
+    },
+    {
+      "url": "https://mc-stan.org/loo/reference/loo_compare.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/loo/reference/loo_compare.html"
+    },
+    {
+      "url": "https://mc-stan.org/loo/reference/loo_model_weights.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/loo/reference/loo_model_weights.html"
+    },
+    {
+      "url": "https://mc-stan.org/loo/reference/loo_moment_match.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/loo/reference/loo_moment_match.html"
+    },
+    {
+      "url": "https://mc-stan.org/loo/reference/loo_subsample.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/loo/reference/loo_subsample.html"
+    },
+    {
+      "url": "https://mc-stan.org/loo/reference/pareto-k-diagnostic.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/loo/reference/pareto-k-diagnostic.html"
+    },
+    {
+      "url": "https://mc-stan.org/posterior/reference/diagnostics.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/posterior/reference/diagnostics.html"
+    },
+    {
+      "url": "https://mc-stan.org/priorsense/reference/index.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/priorsense/reference/index.html"
+    },
+    {
+      "url": "https://mc-stan.org/projpred/reference/cv_varsel.html",
+      "status": 200,
+      "resolved_url": "https://mc-stan.org/projpred/reference/cv_varsel.html"
+    },
+    {
+      "url": "https://mjskay.github.io/ggdist/",
+      "status": 200,
+      "resolved_url": "https://mjskay.github.io/ggdist/"
+    },
+    {
+      "url": "https://mjskay.github.io/tidybayes/",
+      "status": 200,
+      "resolved_url": "https://mjskay.github.io/tidybayes/"
+    },
+    {
+      "url": "https://paulbuerkner.com/brms/reference/create_priorsense_data.brmsfit.html",
+      "status": 200,
+      "resolved_url": "https://paulbuerkner.com/brms/reference/create_priorsense_data.brmsfit.html"
+    },
+    {
+      "url": "https://paulbuerkner.com/brms/reference/index.html",
+      "status": 200,
+      "resolved_url": "https://paulbuerkner.com/brms/reference/index.html"
+    },
+    {
+      "url": "https://paulbuerkner.com/brms/reference/loo.brmsfit.html",
+      "status": 200,
+      "resolved_url": "https://paulbuerkner.com/brms/reference/loo.brmsfit.html"
+    },
+    {
+      "url": "https://preliz.readthedocs.io/en/latest/unidimensional.html",
+      "status": 200,
+      "resolved_url": "https://preliz.readthedocs.io/en/latest/unidimensional.html"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v108/magnusson20a.html",
+      "status": 200,
+      "resolved_url": "https://proceedings.mlr.press/v108/magnusson20a.html"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v97/magnusson19a.html",
+      "status": 200,
+      "resolved_url": "https://proceedings.mlr.press/v97/magnusson19a.html"
+    },
+    {
+      "url": "https://python.arviz.org/en/stable/",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/en/stable/"
+    },
+    {
+      "url": "https://python.arviz.org/projects/plots/en/stable/",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/projects/plots/en/stable/"
+    },
+    {
+      "url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.loo.html",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.loo.html"
+    },
+    {
+      "url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.loo_moment_match.html",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.loo_moment_match.html"
+    },
+    {
+      "url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.loo_subsample.html",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.loo_subsample.html"
+    },
+    {
+      "url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.psense_summary.html",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/projects/stats/en/stable/api/generated/arviz_stats.psense_summary.html"
+    },
+    {
+      "url": "https://python.arviz.org/projects/stats/en/stable/api/index.html",
+      "status": 200,
+      "resolved_url": "https://python.arviz.org/projects/stats/en/stable/api/index.html"
+    },
+    {
+      "url": "https://www.pymc.io/projects/docs/en/stable/api.html",
+      "status": 200,
+      "resolved_url": "https://www.pymc.io/projects/docs/en/stable/api.html"
+    }
+  ]
+}

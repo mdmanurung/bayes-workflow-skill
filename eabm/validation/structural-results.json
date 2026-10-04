@@ -1,0 +1,26 @@
+{
+  "markdown_files": 48,
+  "evidence_records": 92,
+  "trees": 7,
+  "exhaustive_route_cases": 11097,
+  "errors": [],
+  "scope": "structural/route checks, not statistical proof",
+  "canonical_validator": {
+    "result": "pass",
+    "message": "Skill is valid!",
+    "directory": "personal-skills/eabm"
+  },
+  "recipe_syntax": {
+    "python_snippets": 22,
+    "r_snippets": 15,
+    "python_scripts": 5,
+    "r_scripts": 2,
+    "python_errors": [],
+    "r_result": "pass; actual R 4.3.3 parsed 15 snippets and 2 scripts"
+  },
+  "artifact_integrity": {
+    "valid_nonempty_pngs": 6,
+    "resource_links": "all checked local links exist"
+  },
+  "snapshot_date": "2026-10-04"
+}

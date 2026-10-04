@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-04",
+  "scope": "small runtime checks, not universal model certification",
+  "python_workflow": {
+    "draws_per_chain": 800,
+    "warmup_per_chain": 1000,
+    "chains": 4,
+    "toy_quantile_precision_budget": 0.05,
+    "diagnostics": {
+      "normal": {
+        "divergences": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bfmi": [
+          1.3744088364185036,
+          1.3383575405502897,
+          1.1511990695601153,
+          1.1092902696826157
+        ],
+        "q95_mcse": {
+          "mu": 0.008563233437172274,
+          "sigma": 0.005942497340984065
+        }
+      },
+      "student": {
+        "divergences": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bfmi": [
+          1.2798546392140766,
+          1.1992051563042867,
+          1.3967319330446604,
+          1.2190990751761681
+        ],
+        "q95_mcse": {
+          "mu": 0.005273014482956723,
+          "sigma": 0.006764399309264646
+        }
+      }
+    },
+    "prior_checks": {
+      "normal": {
+        "q99_abs_y": 8.339213301472197
+      },
+      "student": {
+        "q99_abs_y": 9.694108777085207
+      }
+    },
+    "loo": {
+      "normal": {
+        "elpd": -149.9245477055654,
+        "se": 16.234704565689984,
+        "good_k": 0.7,
+        "max_k": 0.9413899726115862
+      },
+      "student": {
+        "elpd": -135.8026090326682,
+        "se": 10.36186906758963,
+        "good_k": 0.7,
+        "max_k": 0.10070939435929475
+      }
+    },
+    "moment_matching": {
+      "max_original_k": 0.9413899726115862,
+      "max_repaired_k": 0.37331629379857867
+    },
+    "subsampling": [
+      {
+        "size": 20,
+        "elpd": -136.22725617279522,
+        "subsampling_se": 0.4866863522238202
+      },
+      {
+        "size": 60,
+        "elpd": -135.87859370475945,
+        "subsampling_se": 0.13122368696197895
+      }
+    ],
+    "scope": "small current-API integration example; scores are not an automatic selection rule"
+  },
+  "analytic_python": {
+    "analytic_iid_draws": true,
+    "chains_as_storage": 4,
+    "draws_each": 1500,
+    "elpd": {
+      "base": -47.312316379297926,
+      "strong": -48.038010318390974
+    },
+    "max_k": {
+      "base": 0.030843994180992842,
+      "strong": 0.11793390936366148
+    },
+    "prior_quantiles": [
+      -0.9999999999998511,
+      3.086977548734925e-15,
+      0.9999999999998573
+    ],
+    "maxent_interval_mass": 0.9000006486333045,
+    "scope": "shared-array API validation; independent analytic draws"
+  },
+  "sbc_python": {
+    "simulations": 1000,
+    "rank_draws": 100,
+    "fit_failures": 0,
+    "uniform_rank_mean": 50.0,
+    "uniform_mean_se": 0.9219544457292888,
+    "mean_ranks": {
+      "mu_rank": 50.525,
+      "loglik_rank": 51.654,
+      "biased_mu_rank": 0.655
+    },
+    "scope": "analytic independent-draw smoke test; not custom MCMC validation"
+  },
+  "sbc_r": [
+    {
+      "quantity": "mu_rank",
+      "mean_rank": "49.758",
+      "uniform_rank_mean": "50",
+      "uniform_mean_se": "0.921954445729289",
+      "simulations": "1000",
+      "rank_draws": "100",
+      "fit_failures": "0"
+    },
+    {
+      "quantity": "loglik_rank",
+      "mean_rank": "49.195",
+      "uniform_rank_mean": "50",
+      "uniform_mean_se": "0.921954445729289",
+      "simulations": "1000",
+      "rank_draws": "100",
+      "fit_failures": "0"
+    },
+    {
+      "quantity": "biased_mu_rank",
+      "mean_rank": "0.662",
+      "uniform_rank_mean": "50",
+      "uniform_mean_se": "0.921954445729289",
+      "simulations": "1000",
+      "rank_draws": "100",
+      "fit_failures": "0"
+    }
+  ],
+  "r_subsample_log": "This is posterior version 1.7.0\n\nAttaching package: \u2018posterior\u2019\n\nThe following objects are masked from \u2018package:stats\u2019:\n\n    mad, sd, var\n\nThe following objects are masked from \u2018package:base\u2019:\n\n    %in%, match\n\nThis is loo version 2.10.1\n- Online documentation and vignettes at mc-stan.org/loo\n- As of v2.0.0 loo defaults to 1 core but we recommend using as many as possible. Use the 'cores' argument or set options(mc.cores = NUM_CORES) for an entire session. \n\nAttaching package: \u2018loo\u2019\n\nThe following object is masked from \u2018package:posterior\u2019:\n\n    gpdfit\n\n\nComputed from 6000 by 10 subsampled log-likelihood\nvalues from 40 total observations.\n\n         Estimate  SE subsampling SE\nelpd_loo    -47.3 2.0            0.1\np_loo         0.5 0.1            0.2\nlooic        94.7 4.0            0.2\n------\nMCSE of elpd_loo is 0.0.\nMCSE and ESS estimates assume independent draws (r_eff=1).\n\nAll Pareto k estimates are good (k < 0.7).\nSee help('pareto-k-diagnostic') for details.\n\nComputed from 6000 by 25 subsampled log-likelihood\nvalues from 40 total observations.\n\n         Estimate  SE subsampling SE\nelpd_loo    -47.3 2.0            0.0\np_loo         0.5 0.1            0.1\nlooic        94.6 4.0            0.1\n------\nMCSE of elpd_loo is 0.0.\nMCSE and ESS estimates assume independent draws (r_eff=1).\n\nAll Pareto k estimates are good (k < 0.7).\nSee help('pareto-k-diagnostic') for details.\nsample_counts 10 25 \n",
+  "r_energy_log": "This is bayesplot version 1.16.0\n- Online documentation and vignettes at mc-stan.org/bayesplot\n- bayesplot theme set to bayesplot::theme_default()\n   * Does _not_ affect other ggplot2 plots\n   * See ?bayesplot_theme_set for details on theme setting\n[1] 1.759453 2.220220 2.095387 2.096369\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n",
+  "r_versions_and_signatures": "posterior 1.7.0 \nloo 2.10.1 \npriorsense 1.4.0 \nbayesplot 1.16.0 \nggdist 3.3.3 \nfunction (x, variable = NULL, variables = NULL, lower_alpha = 0.99, \n    upper_alpha = 1.01, div_measure = \"cjs_dist\", measure_args = list(), \n    component = c(\"prior\", \"likelihood\"), sensitivity_threshold = 0.05, \n    moment_match = FALSE, k_threshold = 0.5, resample = FALSE, \n    transform = NULL, prediction = NULL, prior_selection = NULL, \n    likelihood_selection = NULL, log_prior_name = \"lprior\", log_lik_name = \"log_lik\", \n    separator = \"_\", num_args = NULL, ...) \nNULL\nfunction (x, ...) \nNULL\nfunction (x, pars = character(), regex_pars = character(), transformations = list(), \n    ..., diag_fun = c(\"hist\", \"dens\"), off_diag_fun = c(\"scatter\", \n        \"hex\"), diag_args = list(), off_diag_args = list(), condition = pairs_condition(), \n    lp = NULL, np = NULL, np_style = pairs_style_np(), max_treedepth = NULL, \n    grid_args = list(), save_gg_objects = TRUE) \nNULL\nfunction (x, ..., binwidth = NULL, bins = NULL, breaks = NULL, \n    alpha = 0.5, merge_chains = FALSE) \nNULL\nfunction (y, yrep, group, stat = \"mean\", ..., discrete = FALSE, \n    facet_args = list(), binwidth = NULL, bins = NULL, breaks = NULL, \n    freq = TRUE) \nNULL\n",
+  "r_power_plot_export": "Completed, nonempty PNG, visually inspected; initial empty export replaced.",
+  "visual_review": [
+    "Normal and Student-t maximum PPCs",
+    "R base-prior power quantities",
+    "Python SBC rank ECDF pointwise bands"
+  ]
+}

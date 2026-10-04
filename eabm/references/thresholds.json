@@ -1,0 +1,143 @@
+{
+  "registry_version": 1,
+  "rhat": {
+    "upper_exclusive": 1.01,
+    "type": "empirical-guideline",
+    "source": "E04; M-RHAT",
+    "context": "rank-normalized split/folded R-hat; final substantive inference",
+    "diagnostic": "rhat",
+    "meaning": "between-chain agreement screen",
+    "threshold": 1.01,
+    "exceptions": "Constant or deterministic quantities may give undefined values. Rough exploratory fits are not adequate for reporting; small R-hat alone does not establish mixing."
+  },
+  "chains": {
+    "recommended": 4,
+    "type": "empirical-guideline",
+    "source": "M-RHAT",
+    "context": "independently initialized MCMC chains; not artificial splits of one run",
+    "diagnostic": "chains",
+    "meaning": "independent-chain diagnostic reliability guideline",
+    "threshold": 4,
+    "exceptions": "Computational cost can constrain chain count; disclose the weaker between-chain assessment. Artificial chains do not validate an approximation."
+  },
+  "ess": {
+    "minimum_per_chain": 100,
+    "type": "empirical-guideline",
+    "source": "E04; M-RHAT",
+    "context": "total bulk and tail ESS screening floor = 100 times chain count; MCSE can require much more",
+    "diagnostic": "ess",
+    "meaning": "pooled bulk/tail screening floor per chain count",
+    "threshold": 100,
+    "exceptions": "Extreme quantiles, rare events and stringent scientific precision can require much larger ESS. Antithetic draws can give ESS above the nominal count."
+  },
+  "divergences": {
+    "target_post_warmup": 0,
+    "type": "empirical-guideline",
+    "source": "D-STAN",
+    "context": "HMC accuracy warning; zero does not prove correctness",
+    "diagnostic": "divergences",
+    "meaning": "post-warmup HMC numerical-accuracy target",
+    "threshold": 0,
+    "exceptions": "Zero divergences does not establish good mixing; even a few can matter, and their count alone does not quantify bias."
+  },
+  "bfmi": {
+    "warning_below": 0.3,
+    "type": "package-warning",
+    "source": "D-STAN; D-AZ-PLOTS; M-ENERGY",
+    "context": "per-chain HMC diagnostic; empirical warning rather than universal theorem",
+    "diagnostic": "bfmi",
+    "meaning": "per-chain energy-exploration warning",
+    "threshold": 0.3,
+    "exceptions": "Empirical HMC warning only; inspect geometry and energy plots above the boundary too. Not a generic sampler diagnostic."
+  },
+  "pareto_k": {
+    "threshold_formula": "min(1 - 1/log10(S), 0.7)",
+    "cap": 0.7,
+    "moment_boundary": 1.0,
+    "type": "empirical-guideline",
+    "source": "M-PSIS; D-LOO-K",
+    "context": "S is nominal posterior draw count used by package; examine low MCMC efficiency too",
+    "diagnostic": "pareto_k",
+    "meaning": "sample-size-dependent PSIS reliability screen",
+    "threshold": "min(1 - 1/log10(S), 0.7)",
+    "exceptions": "Nominal draw count can make the screen optimistic when MCMC efficiency is poor. Low k does not establish model adequacy; high-k repairs need rechecking."
+  },
+  "power_sensitivity": {
+    "screen_above": 0.05,
+    "alphas": [
+      0.99,
+      1.01
+    ],
+    "plot_alphas": [
+      0.8,
+      1.0,
+      1.25
+    ],
+    "type": "empirical-guideline",
+    "source": "E06; M-SENSE; D-AZ-SENSE; D-PRIORSENSE",
+    "context": "CJS-based local sensitivity gradient, not raw CJS distance; importance reliability checked separately",
+    "diagnostic": "power_sensitivity",
+    "meaning": "local CJS-derived sensitivity screening gradient",
+    "threshold": 0.05,
+    "exceptions": "Intended informative priors may legitimately be influential. Local powering cannot change prior support; selected factors/measure/quantity affect the interpretation."
+  },
+  "elpd_small": {
+    "absolute_difference_below": 4,
+    "type": "rule-of-thumb",
+    "source": "E07",
+    "context": "descriptive book heuristic for total log ELPD; sample size, target, SE and scientific utility override; never a selection rule",
+    "diagnostic": "elpd_small",
+    "meaning": "book descriptive small total ELPD difference",
+    "threshold": 4,
+    "exceptions": "Not invariant to sample size, score scale or scientific utility. Difference uncertainty and candidate adequacy override the heuristic."
+  },
+  "large_data_start": {
+    "illustrative_subsample": 100,
+    "type": "rule-of-thumb",
+    "source": "E08",
+    "context": "book starting example, not guaranteed sufficient; grow by subsampling uncertainty and influential strata",
+    "diagnostic": "large_data_start",
+    "meaning": "illustrative probability-sample pilot",
+    "threshold": 100,
+    "exceptions": "Rare influential units, groups or dependence may require a different design or more observations; a pilot is not a precision guarantee."
+  },
+  "mcse": {
+    "universal_threshold": null,
+    "type": "rule-of-thumb",
+    "source": "E04; M-RHAT",
+    "context": "require numerical error small against estimand-specific scientific tolerance; compare quantile MCSE for interval endpoints",
+    "diagnostic": "mcse",
+    "meaning": "estimand-specific numerical precision budget; no universal cutoff",
+    "threshold": null,
+    "exceptions": "Undefined or infinite moments invalidate a mean/SD precision target. Use valid quantiles or revise the intended estimand."
+  },
+  "comparison_small_n": {
+    "warning_below": 100,
+    "type": "package-warning",
+    "source": "D-AZ; D-LOO-COMPARE",
+    "context": "current comparison normal-approximation diagnostic; small-N flag is not a selection or validity theorem",
+    "diagnostic": "comparison_small_n",
+    "meaning": "normal-approximation caution flag",
+    "threshold": 100,
+    "exceptions": "Package caution is not a theorem or an automatic prohibition; assess skewness, dependence and evaluation-unit information."
+  },
+  "priorsense_mm_trigger": {
+    "default_k": 0.5,
+    "type": "package-warning",
+    "source": "D-PRIORSENSE",
+    "context": "default algorithm trigger in powerscale_sensitivity, not the general PSIS trust threshold; inspect actual installed defaults",
+    "diagnostic": "priorsense_mm_trigger",
+    "meaning": "algorithm-specific repair trigger",
+    "threshold": 0.5,
+    "exceptions": "Adapter and package-version defaults differ. This is an algorithm trigger rather than a universal importance-sampling trust threshold."
+  },
+  "pareto_moment_boundary": {
+    "threshold": 1.0,
+    "meaning": "Pareto-tail model reaches failure of raw importance-ratio first moment",
+    "source": "M-PSIS",
+    "type": "theoretical",
+    "context": "Tail approximation; estimated k is uncertain and diagnoses importance ratios, not posterior parameter moments",
+    "exceptions": "Finite-sample k estimates do not establish exact true tail behavior; still do not trust high-k PSIS",
+    "diagnostic": "pareto_moment_boundary"
+  }
+}

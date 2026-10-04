@@ -1,0 +1,20 @@
+# Unresolved source questions and boundaries
+
+Distinguish observed source limitations from our code-review inferences. These are not claims of author-approved corrections. Resolve before adapting the affected pattern.
+
+| Issue | Evidence/status | Action in this skill |
+|---|---|---|
+| dogs_5.stan row-wise Cholesky transform | Code-review inference: row-wise independent z multiplied by D L has covariance L-transpose D-squared L, while generated Sigma is D L L-transpose D. An orientation mismatch appears possible. | Do not copy that expression. Use column-wise diag_pre_multiply(tau,L)*z and numerically verify implied covariance. No official erratum found in retrieved snapshot. |
+| golf bounded exponential latent prior | Code-review inference: bounded epsilon with sigma-dependent exponential rate requires a truncation normalizer if intended as a normalized conditional prior; a hyperprior on scale must also be explicit. Intent of unnormalized joint formulation is not settled here. | Derive the joint prior and normalize where parameter-dependent; do not transplant the demonstration as a generic prior template. |
+| Centered sum-to-zero scale prior | Code-review inference supported by current Stan manual: park_3.stan/park_4.stan use J normal factors on a J−1 dimensional vector with inferred sigma and omit the compensating +log(sigma). Joint intent is not declared an official erratum. | Do not copy as a normalized conditional Gaussian prior without that adjustment; fixed-scale standardized NCP is a different implementation. |
+| SBC restricted-domain runs | Data-only rejection and sampler-warning exclusion appear in example discussions. Current SBC guidance allows diagnostic-defined data restrictions with guarantees limited to that domain; shared inference randomness and post hoc selection require additional care. | Report all failures; label a data-restricted target and restrictions before simulation; do not omit failed fits from unconditional success claims. |
+| MRP coronavirus data | Real individual demographics/population cells unavailable; example simulates them. | Treat as an implementation scaffold, not a substantive prevalence reanalysis. |
+| Population effect in nonlinear links | Setting group effects to zero in posterior_epred is not integration over the group distribution. | Label typical-group conditional versus population-marginal mean; integrate and target-weight when required. |
+| Birthdays provisional computations | Several exploratory fits are short or retain warnings; some final long runs are not executed in rendered chunks. | Tag provisional evidence; recheck final posterior rather than copying diagnostic success. |
+| sharks data documentation | readme.txt contains placeholders; time regularity and missing sentinels need verification. | Require track boundary, singleton/short track, missing-component and time-step tests before reuse. |
+| Lost sensitivity code | misc/chapter_08/section_08_05/README.md states code for Figure 8.12 is lost. | Cite available description; do not imply recovery of that implementation. |
+| Stale navigation/development paths | Quarto and case links differ for park_rule; misc kilpis code has local development package paths; variable-selection setup has another project root. | Use reviewed repository source and current APIs; do not ship environment-specific paths. |
+| Coverage beyond supplied sources | Missingness mechanisms, ordinal and general survival modeling, causal transport, signed biological scores are not comprehensively demonstrated by the cases. | Supply qualified scientific transfer questions, not invented domain-specific prescriptions. |
+| Full inference execution | Historical case fits and all R package integrations were not reproduced while constructing the skill. | Record exactly what was executed in the validation report; require dataset-specific compile, fit, diagnostics and PPC before inference. |
+
+Read official [errata](https://avehtari.github.io/Bayesian-Workflow/errata.html) before extending this snapshot; corrections already applied are recorded in [source map](../references/source-map.md).

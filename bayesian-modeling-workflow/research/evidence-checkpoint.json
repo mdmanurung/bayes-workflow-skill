@@ -1,0 +1,8 @@
+{
+  "inventory_completed_utc": "2026-10-04T17:41:10.723524+00:00",
+  "evidence_rows": 23,
+  "tracked_files": 296,
+  "official_commit": "ceb65599292320fc7ddb565d73f8d6e41cfe7a64",
+  "matrix_sha256": "0fea7f74da241605ea5147c00755cc371621aecb10cd4d4a0c9c45d5ffe81d4b",
+  "skill_md_exists_at_checkpoint": false
+}
