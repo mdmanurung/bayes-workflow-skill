@@ -48,8 +48,23 @@ def main():
     reuse = r("run_fit.R", "--model", os.path.join(tmp, "good.stan"), "--data", os.path.join(tmp, "good.json"),
               "--out", os.path.join(tmp, "good_out"), "--seed", "1")
     assert reuse.returncode != 0 and "already has CSVs" in reuse.stdout, reuse.stdout[-2000:]
+    # a failed fit still leaves a preliminary version record
+    with open(os.path.join(tmp, "broken.stan"), "w") as handle:
+        handle.write("parameters { real x; } model { x ~ normal(0, 0); }")  # pedantic/compile failure
+    broken = r("run_fit.R", "--model", os.path.join(tmp, "broken.stan"), "--data", os.path.join(tmp, "good.json"),
+               "--out", os.path.join(tmp, "broken_out"), "--seed", "1")
+    assert broken.returncode != 0, broken.stdout[-2000:]
+    assert os.path.exists(os.path.join(tmp, "broken_out", "versions.txt")), "preliminary versions.txt missing"
+    # non-integer and bad-model validation
+    bad_int = r("run_fit.R", "--model", os.path.join(tmp, "good.stan"), "--data", os.path.join(tmp, "good.json"),
+                "--out", os.path.join(tmp, "bad_int_out"), "--seed", "1", "--chains", "abc")
+    assert bad_int.returncode != 0 and "positive integer" in bad_int.stdout, bad_int.stdout[-2000:]
+    bad_ext = r("run_fit.R", "--model", os.path.join(tmp, "good.json"), "--data", os.path.join(tmp, "good.json"),
+                "--out", os.path.join(tmp, "bad_ext_out"), "--seed", "1")
+    assert bad_ext.returncode != 0 and ".stan file" in bad_ext.stdout, bad_ext.stdout[-2000:]
     shutil.rmtree(tmp)
-    print("ok: run_fit.R + check_saved_fit.R (clean=0, flagged=1, reused dir refused)")
+    print("ok: run_fit.R + check_saved_fit.R (clean=0, flagged=1, reused dir refused, "
+          "preliminary versions.txt, int/.stan validation)")
 
 
 if __name__ == "__main__":
