@@ -1,7 +1,7 @@
 {
   "name": "bayes-workflow",
   "description": "Bayesian modeling skills and subagents: model building (Bayesian Workflow) and diagnostics/criticism (EABM) with Stan, cmdstanr, brms, ArviZ.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": { "name": "mdmanurung" },
   "keywords": ["bayesian", "stan", "brms", "cmdstanr", "arviz", "mcmc"]
 }
