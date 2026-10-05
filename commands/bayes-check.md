@@ -8,7 +8,7 @@ Check the saved Bayesian fit at: $ARGUMENTS
 1. **Pick the fit.** If no path was given, use the most recently modified `*.rds` file or directory containing CmdStan CSVs under the current directory (max depth 4, skip `.git`, `renv`, `node_modules`). Say which one you picked.
 2. **Get the screen.**
    - If `<path>/diagnostics.txt` exists and is newer than the fit files (written by the SLURM follow-up job), read it. If its first line shows the fit job did not COMPLETE, or it has no `FLAG:`/`OK:` line, report the fit as failed or partial (quote the error and point to `slurm-*.out`) instead of diagnosing it.
-   - Otherwise run `Rscript "${CLAUDE_PLUGIN_ROOT}/scripts/check_saved_fit.R" <path>`.
+   - Otherwise run `Rscript "${CLAUDE_PLUGIN_ROOT}/scripts/check_saved_fit.R" <path>`. Exit 1 with `FLAG:` lines is a flagged fit, not a crash; diagnose it.
    - If `Rscript` is not on PATH or cmdstanr/posterior fail to load, stop and ask which environment to activate (module, conda, pixi, renv). Do not guess.
 3. **Diagnose.** Pass the screen output and the path of the model code (if found next to the fit or in `versions.txt`) to the `bayes-workflow:mcmc-diagnostician` agent.
 4. **Report** in this shape, at most 5 lines before any table:

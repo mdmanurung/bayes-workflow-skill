@@ -46,6 +46,7 @@ context if a sampler is called without `seed` or a fit is saved without a versio
 Rscript scripts/run_fit.R --model m.stan --data d.json --out DIR --seed N [--chains 4 --threads 1 --warmup 1000 --sampling 1000]
 Rscript scripts/check_saved_fit.R DIR|fit.rds [--vars a,b] [--max-treedepth 10]
 ```
+`check_saved_fit.R` exits 1 when it prints any `FLAG:` line, so `check && next_step` stops on a flagged fit.
 `run_fit.R` writes CmdStan CSVs, `fit.rds` and `versions.txt` (args, model/data md5, cmdstan version, SLURM job id, sessionInfo).
 
 ## Install
@@ -59,4 +60,5 @@ claude --plugin-dir /path/to/bayes-workflow-skill      # dev
 python3 skills/bayesian-modeling-workflow/tests/validate_structure.py skills/bayesian-modeling-workflow
 python3 skills/eabm/scripts/audit_skill.py
 python3 hooks/tests/test_fit_hygiene.py
+RSCRIPT=/path/to/Rscript python3 scripts/tests/test_scripts.py   # compiles 2 small models, ~2 min; skips without Rscript
 ```

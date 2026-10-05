@@ -2,6 +2,7 @@
 # Usage: Rscript check_saved_fit.R PATH [--vars a,b] [--max-treedepth 10]
 #   PATH: directory of CmdStan CSVs, or .rds holding a CmdStanMCMC or brmsfit.
 # Cutoffs come from skills/eabm/references/thresholds.json. Passing is screening, not proof of convergence.
+# Exit status: 0 = no flags, 1 = flags printed (or an R error, which prints "Error").
 args <- commandArgs(trailingOnly = TRUE)
 if (!length(args)) stop("usage: Rscript check_saved_fit.R PATH [--vars a,b] [--max-treedepth 10]")
 path <- args[1]
@@ -79,5 +80,9 @@ low <- names(bfmi)[bfmi < th$bfmi$threshold]
 if (length(low)) flags <- c(flags, sprintf("E-BFMI < %s in chains %s", th$bfmi$threshold, paste(low, collapse = ", ")))
 
 cat(sprintf("E-BFMI by chain: %s\n", paste(sprintf("%.2f", bfmi), collapse = " ")))
-if (length(flags)) cat(paste0("FLAG: ", flags, "\n"), sep = "") else
+if (!length(flags)) {
   cat("OK: no screening flags. Screening only; still check PPC, sensitivity and MCSE for reported quantities.\n")
+} else {
+  cat(paste0("FLAG: ", flags, "\n"), sep = "")
+  quit(status = 1)  # lets `check && next_step` stop on a flagged fit
+}
