@@ -1,7 +1,7 @@
 ---
 name: bayes-model-reviewer
 description: Read-only review of an existing Bayesian model (formula, Stan/brms code, priors, identification, parameterization) before any fitting. Use when asked to critique, sanity-check or audit a model specification or analysis plan.
-tools: Read, Grep, Glob, Bash
+tools: Read, Grep, Glob, Bash, Skill
 model: opus
 ---
 

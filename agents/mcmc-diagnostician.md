@@ -1,7 +1,7 @@
 ---
 name: mcmc-diagnostician
 description: Triage a failing or suspicious fit: divergences, R-hat/ESS/MCSE, treedepth, E-BFMI, multimodality, high Pareto-k, bad PPC. Use when given a fit object, CmdStan output or diagnostics summary and asked what is wrong and what to check next.
-tools: Read, Grep, Glob, Bash
+tools: Read, Grep, Glob, Bash, Skill
 model: opus
 ---
 

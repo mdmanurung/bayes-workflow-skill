@@ -1,7 +1,7 @@
 ---
 name: bayes-skeptic
 description: Adversarial check of a surprising Bayesian result (huge effect, LOO winner by tiny margin, perfect fit, null from a weak model) before it is reported or built upon.
-tools: Read, Grep, Glob, Bash
+tools: Read, Grep, Glob, Bash, Skill
 model: opus
 ---
 

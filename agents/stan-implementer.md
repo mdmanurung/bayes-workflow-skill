@@ -1,7 +1,7 @@
 ---
 name: stan-implementer
 description: Implements and runs Bayesian model code: Stan/cmdstanr/brms models, simulators, prior predictive checks, fake-data recovery, SBC. Use when a model design is agreed and needs code, compilation and a validation run.
-tools: Read, Grep, Glob, Edit, Write, Bash
+tools: Read, Grep, Glob, Edit, Write, Bash, Skill
 model: sonnet
 ---
 
