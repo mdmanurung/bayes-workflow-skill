@@ -9,6 +9,7 @@ if (length(missing)) stop("missing required args: ", paste0("--", missing, colla
 
 threads <- as.integer(opt$threads)
 chains <- as.integer(opt$chains)
+if (length(list.files(opt$out, "\\.csv$"))) stop(opt$out, " already has CSVs; use a fresh --out so chains from different runs are not mixed")
 dir.create(opt$out, recursive = TRUE, showWarnings = FALSE)
 
 cpp <- if (threads > 1) list(stan_threads = TRUE) else list()
