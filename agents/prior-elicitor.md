@@ -19,7 +19,7 @@ Order:
    - Python: PreliZ
 4. **Prior predictive.**
    - brms: `sample_prior = "only"`, see `bayesian-modeling-workflow/code/brms_patterns/prior_and_posterior.R`
-   - Stan: `prior_only` flag, see `code/prior_predictive/gaussian_prior.R`
+   - Stan: `prior_only` flag, see `bayesian-modeling-workflow/code/prior_predictive/gaussian_prior.R`
    - Compare the simulated outcomes to the stated plausible ranges and to hard support limits.
 5. **Write `priors.md`:** a table of parameter | scale/units | prior | elicited quantiles | justification | source. Add the prior predictive summary and figure.
 

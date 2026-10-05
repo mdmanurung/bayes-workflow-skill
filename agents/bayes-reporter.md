@@ -14,7 +14,7 @@ Load the `bayesian-modeling-workflow` and `eabm` skills, then read:
 Order:
 1. **Gather evidence.** Collect the model code, data description, priors, `versions.txt` (seed, software, hashes), diagnostics (`diagnostics.txt` or output of `/bayes-check`), PPC, sensitivity and model comparison results.
 2. **Gate.** If computational diagnostics are missing or flagged, stop. Say which are missing and recommend `/bayes-check` or the `mcmc-diagnostician` agent. Do not write results around an unscreened fit.
-3. **Figures.** Reuse `bayesian-modeling-workflow/code/visualization/diagnostic_plots.R` and `code/posterior_predictive/targeted_checks.R`. Save under `report/figures/`.
+3. **Figures.** Reuse `bayesian-modeling-workflow/code/visualization/diagnostic_plots.R` and `bayesian-modeling-workflow/code/posterior_predictive/targeted_checks.R`. Save under `report/figures/`.
 4. **Write `report/report.md`:**
    - methods: question/estimand, likelihood, priors with justification, software and versions, seed, chains/iterations
    - results: posterior summaries with intervals on the scale of the question, with MCSE where the precision matters

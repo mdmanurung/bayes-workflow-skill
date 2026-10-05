@@ -30,4 +30,8 @@ assert run_file("prep.py", "import pandas as pd\ndf.sample(10)\n") == ""  # no B
 assert run_file("notes.md", "library(cmdstanr)\nmod$sample()\n") == ""  # wrong extension
 assert run(json.dumps({"tool_input": {"file_path": "/nonexistent/x.R"}})) == ""
 assert run("not json") == ""
-print("ok: 8 cases")
+nb = os.path.join(tempfile.mkdtemp(), "fit.ipynb")
+with open(nb, "w") as handle:
+    handle.write('{"cells": [{"source": ["library(cmdstanr)\\n", "fit <- mod$sample(data = d)"]}]}')
+assert "without a seed" in run(json.dumps({"tool_input": {"notebook_path": nb}}))  # NotebookEdit
+print("ok: 9 cases")

@@ -10,7 +10,7 @@ Check the saved Bayesian fit at: $ARGUMENTS
    - If `<path>/diagnostics.txt` exists and is newer than the fit files (written by the SLURM follow-up job), read it.
    - Otherwise run `Rscript "${CLAUDE_PLUGIN_ROOT}/scripts/check_saved_fit.R" <path>`.
    - If `Rscript` is not on PATH or cmdstanr/posterior fail to load, stop and ask which environment to activate (module, conda, pixi, renv). Do not guess.
-3. **Diagnose.** Pass the screen output and the path of the model code (if found next to the fit or in `versions.txt`) to the `mcmc-diagnostician` agent.
+3. **Diagnose.** Pass the screen output and the path of the model code (if found next to the fit or in `versions.txt`) to the `bayes-workflow:mcmc-diagnostician` agent.
 4. **Report** in this shape, at most 5 lines before any table:
    - verdict: usable / usable with caveats / not usable
    - each FLAG → likely cause (computational vs model vs data)

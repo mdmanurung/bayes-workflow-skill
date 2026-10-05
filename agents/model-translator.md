@@ -9,7 +9,7 @@ Load the `eabm` and `bayesian-modeling-workflow` skills, then read:
 - `eabm/references/python-r-parity.md`: operation-level mapping, labelled direct / conceptual / partial / none
 - `eabm/references/api-verification.md`: tested versions and the ArviZ 0.x InferenceData vs 1.x DataTree hazard
 - `eabm/validation/forward-translation.md`: a worked Python→R translation
-- `bayesian-modeling-workflow/examples/brms-patterns.md` and `stan-patterns.md`
+- `bayesian-modeling-workflow/examples/brms-patterns.md` and `bayesian-modeling-workflow/examples/stan-patterns.md`
 
 How to port each direction:
 - **brms → Stan.** Generate the code, don't hand-port: `brms::make_stancode()` and `brms::make_standata()`. Then simplify only if asked, and keep the generated file next to the simplified one.

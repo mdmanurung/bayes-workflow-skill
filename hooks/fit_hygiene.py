@@ -32,7 +32,8 @@ def reminders(text):
 def main():
     try:
         event = json.load(sys.stdin)
-        path = event["tool_input"]["file_path"]
+        tool_input = event["tool_input"]
+        path = tool_input.get("file_path") or tool_input["notebook_path"]
     except Exception:
         return
     if os.path.splitext(path)[1] not in EXTENSIONS:
