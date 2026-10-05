@@ -3,9 +3,14 @@
 #        [--chains 4] [--threads 1] [--warmup 1000] [--sampling 1000]
 args <- commandArgs(trailingOnly = TRUE)
 opt <- list(chains = "4", threads = "1", warmup = "1000", sampling = "1000")
+if (length(args) %% 2) stop("flags must come in --name value pairs")
 for (i in seq(1, length(args), by = 2)) opt[[sub("^--", "", args[i])]] <- args[i + 1]
 missing <- setdiff(c("model", "data", "out", "seed"), names(opt))
 if (length(missing)) stop("missing required args: ", paste0("--", missing, collapse = " "))
+unknown <- setdiff(names(opt), c("model", "data", "out", "seed", "chains", "threads", "warmup", "sampling"))
+if (length(unknown)) stop("unknown args: ", paste0("--", unknown, collapse = " "))
+seed <- as.integer(opt$seed)
+if (is.na(seed)) stop("--seed must be an integer below 2^31")
 
 threads <- as.integer(opt$threads)
 chains <- as.integer(opt$chains)
@@ -13,9 +18,11 @@ if (length(list.files(opt$out, "\\.csv$"))) stop(opt$out, " already has CSVs; us
 dir.create(opt$out, recursive = TRUE, showWarnings = FALSE)
 
 cpp <- if (threads > 1) list(stan_threads = TRUE) else list()
-mod <- cmdstanr::cmdstan_model(opt$model, pedantic = TRUE, cpp_options = cpp)
+# Separate binary for threaded builds: cmdstanr reuses an up-to-date exe even when cpp_options differ.
+exe <- sub("\\.stan$", if (threads > 1) "_threads" else "", opt$model)
+mod <- cmdstanr::cmdstan_model(opt$model, exe_file = exe, pedantic = TRUE, cpp_options = cpp)
 fit <- mod$sample(
-  data = opt$data, seed = as.integer(opt$seed),
+  data = opt$data, seed = seed,
   chains = chains, parallel_chains = chains,
   threads_per_chain = if (threads > 1) threads else NULL,
   iter_warmup = as.integer(opt$warmup), iter_sampling = as.integer(opt$sampling),

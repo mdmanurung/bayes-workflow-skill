@@ -34,4 +34,9 @@ nb = os.path.join(tempfile.mkdtemp(), "fit.ipynb")
 with open(nb, "w") as handle:
     handle.write('{"cells": [{"source": ["library(cmdstanr)\\n", "fit <- mod$sample(data = d)"]}]}')
 assert "without a seed" in run(json.dumps({"tool_input": {"notebook_path": nb}}))  # NotebookEdit
-print("ok: 9 cases")
+assert run_file("prep.py", "import pymc as pm\ndf.sample(10)\n") == ""  # pandas sample next to pymc
+assert run_file("m.py", "import pymc as pm\nidata = pm.sample(random_state=1)\n") == ""  # PyMC seed arg
+assert "without a seed" in run_file("m.py", "import numpyro\nmcmc = MCMC(NUTS(model), num_samples=500)\n")
+assert "without a seed" in run_file("m.R", "library(brms)\nf <- brm_multiple(y ~ x, data = imps)\n")
+assert "version record" in run_file("m.R", "library(brms)\nf <- brm(y ~ x, seed = 1)\nreadr::write_rds(f, 'f.rds')\n")
+print("ok: 14 cases")

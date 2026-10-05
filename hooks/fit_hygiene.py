@@ -10,10 +10,12 @@ import re
 import sys
 
 EXTENSIONS = {".R", ".r", ".Rmd", ".rmd", ".qmd", ".py", ".ipynb"}
-BAYES_LIB = re.compile(r"cmdstanr|\bbrms\b|rstan|cmdstanpy|\bpymc\b|CmdStanModel|stan_model|\bnumpyro\b")
-SAMPLER = re.compile(r"\$sample\(|\bbrm\(|\bsampling\(|\bstan\(|\.sample\(|\bpm\.sample\(")
-SEED = re.compile(r"seed", re.IGNORECASE)
-SAVE = re.compile(r"saveRDS|save_object|save_output_files|to_netcdf|\.save\(")
+BAYES_LIB = re.compile(r"cmdstanr|\bbrms\b|rstan|cmdstanpy|\bpymc\b|CmdStanModel|stan_model|\bnumpyro\b|\bimport stan\b")
+# Generic .sample( only counts with sampler-style args, so pandas df.sample(10) stays silent.
+SAMPLER = re.compile(r"\$sample\(|\bbrm(_multiple)?\(|\bsampling\(|\bstan\(|\bpm\.sample\(|\bMCMC\(|\bstan\.build\("
+                     r"|\.sample\((?=[^)]*\b(data|chains|draws|tune|iter_sampling|num_chains)\b)")
+SEED = re.compile(r"seed|random_state|rng_key|PRNGKey", re.IGNORECASE)
+SAVE = re.compile(r"saveRDS|write_rds|save_object|save_output_files|to_netcdf|\.save\(")
 VERSIONS = re.compile(r"sessionInfo|session_info|cmdstan_version|__version__|versions\.txt|show_versions")
 
 

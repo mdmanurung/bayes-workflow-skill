@@ -6,15 +6,26 @@ args <- commandArgs(trailingOnly = TRUE)
 if (!length(args)) stop("usage: Rscript check_saved_fit.R PATH [--vars a,b] [--max-treedepth 10]")
 path <- args[1]
 opt <- list()
+if (length(args) %% 2 == 0) stop("flags must come in --name value pairs after PATH")
 if (length(args) > 1) for (i in seq(2, length(args), by = 2)) opt[[sub("^--", "", args[i])]] <- args[i + 1]
+unknown <- setdiff(names(opt), c("vars", "max-treedepth"))
+if (length(unknown)) stop("unknown args: ", paste0("--", unknown, collapse = " "))
 
 script_dir <- dirname(normalizePath(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE))))
-th <- jsonlite::fromJSON(file.path(script_dir, "..", "skills", "eabm", "references", "thresholds.json"))
+th_file <- file.path(script_dir, "..", "skills", "eabm", "references", "thresholds.json")
+if (!file.exists(th_file)) stop("thresholds.json not found at ", th_file, "; run this script from the plugin's scripts/ dir")
+th <- jsonlite::fromJSON(th_file)
 
 if (dir.exists(path)) {
   csvs <- list.files(path, "\\.csv$", full.names = TRUE)
   csvs <- csvs[vapply(csvs, function(f) startsWith(readLines(f, n = 1), "#"), logical(1))]
   if (!length(csvs)) stop("no CmdStan CSVs in ", path)
+  # Refuse CSVs from different runs: chains must share model and seed.
+  header <- function(f, key) grep(paste0("^#\\s*", key, " = "), readLines(f, n = 80), value = TRUE)[1]
+  for (key in c("model", "seed")) {
+    vals <- unique(vapply(csvs, header, character(1), key = key))
+    if (length(vals) > 1) stop("CSVs in ", path, " come from different runs (", key, " differs): ", paste(vals, collapse = " | "))
+  }
   obj <- cmdstanr::as_cmdstan_fit(csvs)
 } else {
   obj <- readRDS(path)
@@ -56,7 +67,7 @@ if (length(bad_rhat)) flags <- c(flags, sprintf("rhat >= %s for %d variables: %s
 undef <- summ$variable[is.na(summ$rhat)]
 if (length(undef)) flags <- c(flags, sprintf("rhat undefined (constant?) for %d variables: %s", length(undef), first(undef)))
 ess_min <- th$ess$threshold * n_chains
-bad_ess <- summ$variable[pmin(summ$ess_bulk, summ$ess_tail) < ess_min & !is.na(summ$ess_bulk)]
+bad_ess <- summ$variable[which(pmin(summ$ess_bulk, summ$ess_tail) < ess_min)]
 if (length(bad_ess)) flags <- c(flags, sprintf("ess_bulk/tail < %d (%d x %d chains) for %d variables: %s",
                                                ess_min, th$ess$threshold, n_chains, length(bad_ess), first(bad_ess)))
 n_div <- sum(diag$divergent)

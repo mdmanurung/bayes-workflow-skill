@@ -18,7 +18,8 @@ How to port each direction:
 
 Parity check (required before declaring done):
 1. Fit both versions on the same data with fixed seeds and comparable draws.
-2. For each shared parameter, compare posterior mean and sd. A mismatch means a difference larger than about 2 × the combined MCSE.
-3. Report a table: parameter | original | port | difference | MCSE | OK. Investigate every mismatch before blaming Monte Carlo noise.
+2. For each shared parameter, compare mean, sd and the 5% / 95% quantiles. Use z = difference / combined MCSE (sqrt(MCSE_a² + MCSE_b²)), with `posterior::mcse_quantile` for quantiles and `mcse_sd` for sd.
+3. Flag |z| > 3. Some |z| > 2 are expected by chance with many parameters (about 5% each), so don't call those mismatches alone. If several parameters drift the same way, or any |z| > 3 appears, rerun with more draws before concluding.
+4. Report a table: parameter | statistic | original | port | difference | combined MCSE | z. Investigate every flagged row before blaming Monte Carlo noise.
 
 Only use a Python branch if an environment with the needed packages exists. Check with `python3 -c "import pymc, arviz"` inside the project's env. Otherwise say so and stop.

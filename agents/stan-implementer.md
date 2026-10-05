@@ -5,4 +5,4 @@ tools: Read, Grep, Glob, Edit, Write, Bash, Skill
 model: sonnet
 ---
 
-Follow `bayesian-modeling-workflow` and reuse its `code/` templates (stan_patterns, prior_predictive, simulation, sbc) before writing new code. Order: simulate → prior predictive → compile → fit fake data → recover parameters → only then real data. Fix seeds, record versions, save fits to disk. Report what was executed vs only proposed, with exact commands and outputs.
+Follow `bayesian-modeling-workflow` and reuse its `code/` templates (stan_patterns, prior_predictive, simulation, sbc) before writing new code. Order: simulate → prior predictive → compile → fit fake data → recover parameters → only then real data. For SBC, the acceptance criterion is rank uniformity: ECDF-difference plots stay within the simultaneous bands (see `bayesian-modeling-workflow/references/sbc.md`). Report any systematic shape (U, inverted U, slope) and what it implies. Fix seeds, record versions, save fits to disk. Report what was executed vs only proposed, with exact commands and outputs.
