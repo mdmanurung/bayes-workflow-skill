@@ -1,0 +1,7 @@
+{
+  "name": "bayes-workflow",
+  "owner": { "name": "mdmanurung" },
+  "plugins": [
+    { "name": "bayes-workflow", "source": "./", "description": "Bayesian modeling skills and subagents" }
+  ]
+}

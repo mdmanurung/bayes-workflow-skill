@@ -1,0 +1,9 @@
+*.rds
+*.RData
+.Rhistory
+__pycache__/
+.ipynb_checkpoints/
+# cmdstan build artifacts
+*.hpp
+*.o
+.claude/settings.local.json
