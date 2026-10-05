@@ -39,4 +39,8 @@ assert run_file("m.py", "import pymc as pm\nidata = pm.sample(random_state=1)\n"
 assert "without a seed" in run_file("m.py", "import numpyro\nmcmc = MCMC(NUTS(model), num_samples=500)\n")
 assert "without a seed" in run_file("m.R", "library(brms)\nf <- brm_multiple(y ~ x, data = imps)\n")
 assert "version record" in run_file("m.R", "library(brms)\nf <- brm(y ~ x, seed = 1)\nreadr::write_rds(f, 'f.rds')\n")
-print("ok: 14 cases")
+assert "without a seed" in run_file("m.py", "import bambi as bmb\nm = bmb.Model('y ~ x', df)\nm.fit(draws=1000, chains=2)\n")
+assert run_file("m.py", "import bambi as bmb\nm = bmb.Model('y ~ x', df)\nm.fit(draws=1000, chains=2, seed=7)\n") == ""
+assert "version record" in run_file("m.R", "library(brms)\nf <- brm(y ~ x, seed = 1)\nqs::qsave(f, 'f.qs')\n")
+assert run_file("m.py", "from sklearn.linear_model import LinearRegression\nLinearRegression().fit(x, y)\n") == ""  # .fit( alone
+print("ok: 18 cases")

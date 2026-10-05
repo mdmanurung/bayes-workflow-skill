@@ -22,6 +22,8 @@ if (dir.exists(path)) {
   csvs <- csvs[vapply(csvs, function(f) startsWith(readLines(f, n = 1), "#"), logical(1))]
   if (!length(csvs)) stop("no CmdStan CSVs in ", path)
   # Refuse CSVs from different runs: chains must share model and seed.
+  # Data identity is not recorded in the CSV header, so same model+seed with
+  # different data would pass; run_fit.R's --out guard prevents that mix.
   header <- function(f, key) grep(paste0("^#\\s*", key, " = "), readLines(f, n = 80), value = TRUE)[1]
   for (key in c("model", "seed")) {
     vals <- unique(vapply(csvs, header, character(1), key = key))
@@ -47,8 +49,12 @@ if (inherits(obj, "CmdStanMCMC")) {
 } else {
   stop("unsupported object class: ", paste(class(obj), collapse = "/"))
 }
+max_depth_assumed <- FALSE
 if (!is.null(opt[["max-treedepth"]])) max_depth <- as.integer(opt[["max-treedepth"]])
-if (is.null(max_depth)) max_depth <- 10L  # ponytail: brms/Stan default; pass --max-treedepth if changed
+if (is.null(max_depth)) {
+  max_depth <- 10L  # ponytail: brms/Stan default; pass --max-treedepth if changed
+  max_depth_assumed <- TRUE
+}
 
 if (!is.null(opt$vars)) draws <- posterior::subset_draws(draws, variable = strsplit(opt$vars, ",")[[1]])
 draws <- posterior::subset_draws(draws, variable = setdiff(posterior::variables(draws), "lp__"))
@@ -57,7 +63,7 @@ summ <- posterior::summarise_draws(draws, "mean", "sd", "rhat", "ess_bulk", "ess
 
 cat(sprintf("fit: %s | chains: %d | draws/chain: %d | variables: %d\n",
             path, n_chains, posterior::niterations(draws), nrow(summ)))
-worst <- summ[order(-summ$rhat, summ$ess_bulk), ]
+worst <- summ[order(-summ$rhat, summ$ess_bulk, na.last = FALSE), ]  # undefined-rhat rows first
 print(as.data.frame(head(worst, 15)), digits = 3, row.names = FALSE)
 if (nrow(summ) > 15) cat(sprintf("(showing worst 15 of %d by rhat)\n", nrow(summ)))
 
@@ -71,10 +77,14 @@ ess_min <- th$ess$threshold * n_chains
 bad_ess <- summ$variable[which(pmin(summ$ess_bulk, summ$ess_tail) < ess_min)]
 if (length(bad_ess)) flags <- c(flags, sprintf("ess_bulk/tail < %d (%d x %d chains) for %d variables: %s",
                                                ess_min, th$ess$threshold, n_chains, length(bad_ess), first(bad_ess)))
+na_ess <- summ$variable[is.na(pmin(summ$ess_bulk, summ$ess_tail)) & !is.na(summ$rhat)]
+if (length(na_ess)) flags <- c(flags, sprintf("ess_bulk/tail undefined for %d non-constant variables: %s",
+                                              length(na_ess), first(na_ess)))
 n_div <- sum(diag$divergent)
 if (n_div > th$divergences$threshold) flags <- c(flags, sprintf("%d divergent transitions (%.2f%%)", n_div, 100 * mean(diag$divergent)))
 n_td <- sum(diag$treedepth >= max_depth)
-if (n_td) flags <- c(flags, sprintf("%d transitions hit max treedepth %d (efficiency, not validity)", n_td, max_depth))
+if (n_td) flags <- c(flags, sprintf("%d transitions hit max treedepth %d%s (efficiency, not validity)", n_td, max_depth,
+                                    if (max_depth_assumed) " [assumed default; pass --max-treedepth if the fit used another]" else ""))
 bfmi <- tapply(diag$energy, diag$chain, function(e) sum(diff(e)^2) / sum((e - mean(e))^2))
 low <- names(bfmi)[bfmi < th$bfmi$threshold]
 if (length(low)) flags <- c(flags, sprintf("E-BFMI < %s in chains %s", th$bfmi$threshold, paste(low, collapse = ", ")))

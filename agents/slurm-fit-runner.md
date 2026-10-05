@@ -27,7 +27,7 @@ Procedure:
    - `--array` only for multiple datasets or seeds (e.g. SBC). Each task gets its own `--out fits/<name>/$SLURM_ARRAY_TASK_ID` and seed `base + $SLURM_ARRAY_TASK_ID` (keep base + tasks below 2^31; `run_fit.R` rejects larger seeds).
 5. **Submit, then return. Do not poll.**
    - `ID=$(sbatch --parsable fits/<name>/job.sbatch)`
-   - then `sbatch --parsable --dependency=afterany:$ID --partition=short --time=00:20:00 --output=fits/<name>/check-%j.out --wrap "{ echo \"fit job $ID state: \$(sacct -j $ID -X -n -o State)\"; <env activation>; Rscript <abs>/check_saved_fit.R fits/<name>; } > fits/<name>/diagnostics.txt 2>&1"`. The first line records whether the fit completed, so a failed or partial fit is never read as a diagnosis.
+   - then `sbatch --parsable --dependency=afterany:$ID --partition=<same partition as the fit job> --time=00:20:00 --output=fits/<name>/check-%j.out --wrap "{ echo \"fit job $ID state: \$(sacct -j $ID -X -n -o State)\"; <env activation>; Rscript <abs>/check_saved_fit.R fits/<name>; } > fits/<name>/diagnostics.txt 2>&1"`. The first line records whether the fit completed, so a failed or partial fit is never read as a diagnosis.
    - For arrays, the `--wrap` body checks each task dir instead: `for d in fits/<name>/*/; do echo "== $d"; Rscript <abs>/check_saved_fit.R "$d"; done > fits/<name>/diagnostics.txt 2>&1`
    - `run_fit.R` refuses an `--out` that already holds CSVs. For a refit, use a new `fits/<name>-v2`; never delete old fits to make room.
 6. **Return** both job ids, partition, time, cpus, output dir, and "check later: `squeue -j <id>`, then `/bayes-check fits/<name>`".
