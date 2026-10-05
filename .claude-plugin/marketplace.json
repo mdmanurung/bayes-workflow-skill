@@ -1,7 +1,16 @@
 {
   "name": "bayes-workflow",
-  "owner": { "name": "mdmanurung" },
+  "owner": {
+    "name": "mdmanurung"
+  },
+  "metadata": {
+    "description": "Bayesian modeling skills, subagents, command and hook for Claude Code"
+  },
   "plugins": [
-    { "name": "bayes-workflow", "source": "./", "description": "Bayesian modeling skills and subagents" }
+    {
+      "name": "bayes-workflow",
+      "source": "./",
+      "description": "Bayesian modeling skills and subagents"
+    }
   ]
 }

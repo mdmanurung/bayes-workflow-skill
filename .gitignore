@@ -7,3 +7,4 @@ __pycache__/
 *.hpp
 *.o
 .claude/settings.local.json
+.scratch/
