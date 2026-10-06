@@ -7,6 +7,16 @@ description: Develop, review, debug and iteratively refine scientific Bayesian m
 
 Build the smallest model that answers the scientific question. Simulate its implications, fit it, interrogate computation and predictions, and revise a named inadequacy. Treat this as a source-grounded synthesis, not an author quotation or an inflexible sequence. Use R, cmdstanr/Stan and brms by default; preserve the user's existing stack when appropriate.
 
+## Honor the task specification verbatim
+
+When the task pins concrete experimental details, they are requirements, not defaults to improve on:
+
+- **Pinned code, seeds and settings.** If the task gives data-generation code, Stan model code, seeds, chains, warmup/sampling iterations or `adapt_delta`, use them exactly. Do not re-seed, re-parameterize, widen priors or raise `adapt_delta` on your own initiative — even when the workflow below would otherwise suggest it. If you believe a pinned choice is suboptimal, say so in your narrative and keep the pinned value.
+- **Required outputs.** If the task names an output file, directory or answer format (e.g. a single token or a number rounded to 2 decimals), produce exactly that: no units, no prose, no extra whitespace, no alternative rounding.
+- **Verify before finishing.** Re-read the task's output requirements and confirm the delivered files match them character-for-character before reporting done.
+
+The iterative workflow below applies to open-ended modeling. For a fully pinned task, the workflow reduces to: implement the spec faithfully, run it, check computation, deliver the required artifact.
+
 ## Select the task and load only needed material
 
 Read the selected playbook and its linked canonical references before acting. Inspect available data, model code, prior definitions, transformations, fit objects and diagnostics. Infer what can be established; ask only consequential missing questions. Never endorse an existing model from its formula alone.
