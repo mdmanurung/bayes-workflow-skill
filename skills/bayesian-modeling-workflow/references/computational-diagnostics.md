@@ -2,6 +2,13 @@
 
 Basis: C01–C09, H02, M01 in [source map](source-map.md). Current official Stan/posterior guidance supplements the case demonstrations. None of these diagnostics proves that an unexplored mode does not exist or that the statistical model is appropriate.
 
+## cmdstanr / posterior API quick reference (current names)
+
+- `fit$diagnostic_summary()` returns per-chain `num_divergent`, `num_max_treedepth` and `ebfmi` — **not** `$divergences`. Sum `num_divergent` across chains for the total post-warmup divergence count.
+- `fit$sampler_diagnostics()` gives the raw per-draw `divergent__`, `treedepth__`, `energy__` columns.
+- ESS and MCSE come from the posterior package: `posterior::ess_bulk()`, `posterior::ess_tail()`, `posterior::mcse_mean()` — **not** `bulk_ess`/`tail_ess` (those are rstan summary column names). `fit$summary()` already includes `ess_bulk`/`ess_tail` columns.
+- `fit$summary()` uses rank-normalized R-hat by default; `cmdstanr::cmdstan_version()` returns the CmdStan version string.
+
 ## Establish the diagnostic object
 
 Use post-warmup chains with chain identity retained. Inspect all model parameters and consequential transformed/derived quantities. Keep generated replicated observations out of an indiscriminate enormous parameter table; diagnose the generating parameters and selected scientific functions. Separate failed evaluations during initialization, warmup and sampling. Record seeds, chain starts and warning counts by chain.
